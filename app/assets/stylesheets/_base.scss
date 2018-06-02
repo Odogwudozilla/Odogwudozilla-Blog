@@ -1,5 +1,8 @@
+$cursive: "Marck+Script";
+
+
 body {
-  background-color: $light-gray;
+  background-color: rgb(214, 220, 243);
  
 }
 
@@ -21,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, p span {
-  font-family: 'Merriweather', serif !important;
+  font-family: $cursive, !important;
   font-size: 20px;
 }
 
