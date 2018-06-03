@@ -50,7 +50,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  # To live reoad the local server
+  # To live reload the local server
   gem 'guard-livereload', require: false
 
 end
