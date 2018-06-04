@@ -79,10 +79,10 @@ GEM
     eventmachine (1.2.7-x64-mingw32)
     eventmachine (1.2.7-x86-mingw32)
     execjs (2.7.0)
-    ffi (1.9.24)
-    ffi (1.9.24-java)
-    ffi (1.9.24-x64-mingw32)
-    ffi (1.9.24-x86-mingw32)
+    ffi (1.9.25)
+    ffi (1.9.25-java)
+    ffi (1.9.25-x64-mingw32)
+    ffi (1.9.25-x86-mingw32)
     formatador (0.2.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -247,6 +247,7 @@ GEM
 
 PLATFORMS
   java
+  ruby
   x64-mingw32
   x86-mingw32
   x86-mswin32
@@ -275,7 +276,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.4.1p111
 
 BUNDLED WITH
    1.16.2
