@@ -1,3 +1,6 @@
+nav {
+    opacity: 0.5;
+}
 .nav-padding {
     padding-right: 0px;
     padding-left: 0px;
@@ -31,7 +34,7 @@
       }
       
     }
-    .nav-item.author-nav {
+    .nav-item {
       img {
         height: 30px;
         width: 30px;
@@ -51,7 +54,7 @@
 }
 
 
-.collapse-bg .card .list-group-item {
+.collapse-bg .list-group-item {
     padding: 0;
     border-radius: 0 !important;
     border-color: black;

@@ -7,10 +7,10 @@
     <%= yield(:page_title) %> | Odogwudozilla</title>
   <%= csrf_meta_tags %>
 
-    <link href="https://fonts.googleapis.com/css?family=Marck+Script|Philosopher:400,700|Merriweather:400,400i,700|Montserrat:300,400,700"
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script|Merienda:700|Raleway+Dots|Merriweather:400,400i,700|Montserrat:300,400,700"
       rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous">
 
 </head>
 
@@ -29,21 +29,50 @@
           </div>
           <% end %>
             <% end %>
-              <div class="row row-home">
-                <div class="card-deck">
-                  <div class="card col-sm-8 card-home border-dark mt-auto">
-                    <div class="card-body">
-                      <h4 class="card-title">Title</h4>
-                      <p class="card-text">My name is Chidozie Nnachor. I am a developer hoping to someday change the world with good intentions</p>
-                    </div>
-                  </div>
+              <div class="namewrapper">
+                <div class="card card-home">
+                  <span class="row">Chidozie Nnachor</span>
+                </div>
+                <div class="">
+                  <ul class="">
+                    <li>
+                      - Economist</li>
+                    <li>
+                      - Code Lover</li>
+                    <li>
+                      - Writer</li>
+                  </ul>
+                </div>
 
-                  <!-- <div class="card col-sm-2">
-                    <span>vertical line</span>
-                  </div> -->
-                  <div class="card col-sm-2 col-auto">black board</div>
+                <div class="icons-social">
+                  <a target="_blank" href="https://github.com/Odogwudozilla">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a target="_blank" href="https://twitter.com/odogwudozilla">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a target="_blank" href="https://stackoverflow.com/story/flexdinesh">
+                    <i class="fab fa-stack-overflow"></i>
+                  </a>
+                  <a target="_blank" href="https://www.linkedin.com/in/chidoziennachor">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a target="_blank" href="https://medium.com/@odogwudozilla">
+                    <i class="fab fa-medium"></i>
+                  </a>
+                  <a target="_blank" href="https://www.freecodecamp.org">
+                    <i class="fab fa-free-code-camp"></i>
+                  </a>
+                  <a target="_blank" href="https://codepen.io">
+                    <i class="fab fa-codepen"></i>
+                  </a>
                 </div>
               </div>
+    </div>
+
+    <!-- <div class="card col-sm-2">
+                    <span>vertical line</span>
+                  </div> -->
     </div>
     <%= yield %>
       </div>
