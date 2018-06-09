@@ -4,7 +4,9 @@
       <span align=center>
         <%=image_tag("favicon.ico")%>
       </span> Odogwudozilla
-      <span class='light'> | Page & Blog</span>
+      <span class='light'> | Page & Blog
+        <%= posts_path %>
+      </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">&#9776;
@@ -13,7 +15,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <%= link_to 'Blog', "#", class: "nav-link" %>
+          <%= link_to 'Blog', posts_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to 'Projects', "#", class: "nav-link" %>
@@ -23,7 +25,7 @@
         </li>
 
         <li class="nav-item">
-          <%= link_to 'Contact', "#", class: "nav-link" %>
+          <%= link_to 'Contact', static_pages_contact_path, class: "nav-link" %>
         </li>
 
       </ul>

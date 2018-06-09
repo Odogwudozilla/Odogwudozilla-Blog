@@ -1,6 +1,13 @@
-
+// container for the homebage background image
+.homepage {
+  background-image: image-url('pendant.jpg');
+  background-size: 100%;
+  flex: 1 0 auto;
+  position: relative;
+}
   //  The flex for pushing the footer to the bottom of the page
 .wrapper {
+  
   flex: 1 0 auto;
   position: relative;
   
@@ -60,3 +67,4 @@
 .icons-social i {
   font-size: 3em;
 }
+

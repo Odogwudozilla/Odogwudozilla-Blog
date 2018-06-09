@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :posts
   root to: 'static_pages#home'
 
   get 'static_pages/about'

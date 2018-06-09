@@ -7,16 +7,15 @@
     <%= yield(:page_title) %> | Odogwudozilla</title>
   <%= csrf_meta_tags %>
 
-    <link href="https://fonts.googleapis.com/css?family=Marck+Script|Merienda:700|Raleway+Dots|Merriweather:400,400i,700|Montserrat:300,400,700"
-      rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous">
 
 </head>
 
 <body>
 
-  <%= render 'layouts/navbar' %>
+
+  <div class="container-fluid homepage">
+
+
 
     <div class="container wrapper <%= controller_name %> <%= action_name %>">
       <% if flash.any? %>
@@ -73,12 +72,12 @@
     <!-- <div class="card col-sm-2">
                     <span>vertical line</span>
                   </div> -->
+  </div>
+  <%= yield %>
     </div>
-    <%= yield %>
+
+    <%= render 'layouts/footer' %>
       </div>
-
-
-      <%= render 'layouts/footer' %>
 </body>
 
 
