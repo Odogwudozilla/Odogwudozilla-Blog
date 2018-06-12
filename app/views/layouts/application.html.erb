@@ -16,14 +16,15 @@
 
 <body>
   <% if current_page?(root_path)%>
-    <%= yield %>
-      <% else %>
-        <%= render 'layouts/navbar' %>
-          <div class="container postwrapper">
-            <%= yield %>
+    <%= render 'layouts/navbar' %>
+      <%= yield %>
+        <% else %>
+          <%= render 'layouts/navbar' %>
+            <div class="container postwrapper">
+              <%= yield %>
 
-          </div>
-          <% end %>
+            </div>
+            <% end %>
 </body>
 
 </html>

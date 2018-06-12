@@ -1,84 +1,61 @@
-<!DOCTYPE html>
-<html>
-
-
-<head>
-  <title>
-    <%= yield(:page_title) %> | Odogwudozilla</title>
-  <%= csrf_meta_tags %>
-
-
-</head>
-
-<body>
-
-
-  <div class="container-fluid homepage">
+<div class="container-fluid homepage">
 
 
 
-    <div class="container wrapper <%= controller_name %> <%= action_name %>">
-      <% if flash.any? %>
-        <% flash.keys.each do |key| %>
-          <div class="alert alert-<%= key.to_s %> alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <%= flash[key] %>
-          </div>
+  <div class="container wrapper <%= controller_name %> <%= action_name %>">
+    <% if flash.any? %>
+      <% flash.keys.each do |key| %>
+        <div class="alert alert-<%= key.to_s %> alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= flash[key] %>
+        </div>
+        <% end %>
           <% end %>
-            <% end %>
-              <div class="namewrapper">
-                <div class="card card-home">
-                  <span class="row">Chidozie Nnachor</span>
-                </div>
-                <div class="">
-                  <ul class="">
-                    <li>
-                      - Economist</li>
-                    <li>
-                      - Code Lover</li>
-                    <li>
-                      - Writer</li>
-                  </ul>
-                </div>
-
-                <div class="icons-social">
-                  <a target="_blank" href="https://github.com/Odogwudozilla">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a target="_blank" href="https://twitter.com/odogwudozilla">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a target="_blank" href="https://stackoverflow.com/story/flexdinesh">
-                    <i class="fab fa-stack-overflow"></i>
-                  </a>
-                  <a target="_blank" href="https://www.linkedin.com/in/chidoziennachor">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a target="_blank" href="https://medium.com/@odogwudozilla">
-                    <i class="fab fa-medium"></i>
-                  </a>
-                  <a target="_blank" href="https://www.freecodecamp.org">
-                    <i class="fab fa-free-code-camp"></i>
-                  </a>
-                  <a target="_blank" href="https://codepen.io">
-                    <i class="fab fa-codepen"></i>
-                  </a>
-                </div>
+            <div class="namewrapper">
+              <div class="card card-home">
+                <span class="row">Chidozie Nnachor</span>
               </div>
-    </div>
+              <div class="">
+                <ul class="">
+                  <li>
+                    - Economist</li>
+                  <li>
+                    - Code Lover</li>
+                  <li>
+                    - Writer</li>
+                </ul>
+              </div>
 
-    <!-- <div class="card col-sm-2">
-                    <span>vertical line</span>
-                  </div> -->
+              <div class="icons-social">
+                <a target="_blank" href="https://github.com/Odogwudozilla">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a target="_blank" href="https://twitter.com/odogwudozilla">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a target="_blank" href="https://stackoverflow.com/story/flexdinesh">
+                  <i class="fab fa-stack-overflow"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/chidoziennachor">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a target="_blank" href="https://medium.com/@odogwudozilla">
+                  <i class="fab fa-medium"></i>
+                </a>
+                <a target="_blank" href="https://www.freecodecamp.org">
+                  <i class="fab fa-free-code-camp"></i>
+                </a>
+                <a target="_blank" href="https://codepen.io">
+                  <i class="fab fa-codepen"></i>
+                </a>
+              </div>
+            </div>
   </div>
-  <%= yield %>
-    </div>
 
-    <%= render 'layouts/footer' %>
-      </div>
-</body>
+</div>
 
 
-</html>
+
+<%= render 'layouts/footer' %>
