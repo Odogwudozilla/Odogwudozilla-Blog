@@ -11,6 +11,11 @@ end
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11', '>= 1.11.1'
+# For authentication
+gem 'devise'
+gem 'omniauth-facebook'
+# Hide the auth keys
+gem "figaro"
 
 
 # *********** My added gems END here: **********************************

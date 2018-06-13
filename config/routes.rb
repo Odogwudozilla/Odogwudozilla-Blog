@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :odogwus, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :posts
   root to: 'static_pages#home'
 

@@ -20,19 +20,36 @@
         <li class="nav-item">
           <%= link_to 'Projects', "#", class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to 'Blink', "#", class: "nav-link" %>
-        </li>
+        <% if odogwu_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            </a>
+            <div class="dropdown-menu text-centre">
+              <a class="dropdown-item">
+                Signed in as
+                <%= current_odogwu.email %>
+              </a>
+              <a class="dropdown-item">
+                <%= link_to 'Sign out', destroy_odogwu_session_path, :method => :delete %>
+              </a>
+          </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to 'Login', new_odogwu_session_path, class: "nav-link"  %>
+            </li>
 
-        <li class="nav-item">
-          <%= link_to 'Contact', static_pages_contact_path, class: "nav-link" %>
-        </li>
+            <% end %>
+
+
+              <li class="nav-item">
+                <%= link_to 'Contact', static_pages_contact_path, class: "nav-link" %>
+              </li>
 
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control py-1" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0 py-1" type="submit">Search</button>
       </form>
+      </div>
     </div>
-  </div>
 </nav>
