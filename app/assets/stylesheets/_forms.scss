@@ -1,0 +1,20 @@
+.form-header {
+  padding-top: 2rem;
+  color: $accent-color;
+}
+
+.form-div {
+  .card {
+    -moz-box-shadow: 0 0 30px 5px #999;
+    -webkit-box-shadow: 0 0 30px 5px #999;
+    a {
+      line-height: 0.1em;
+      &:hover {
+        color: green;
+    }
+    }
+    .form-actions {
+      margin-bottom: 20px;
+    }
+  }
+}

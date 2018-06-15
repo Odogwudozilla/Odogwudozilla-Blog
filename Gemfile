@@ -11,13 +11,10 @@ end
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11', '>= 1.11.1'
-# For authentication
-gem 'devise'
-gem 'omniauth-facebook'
-# Hide the auth keys
-gem "figaro"
-
-
+# Forms made easy for Rails!
+gem 'simple_form', '~> 3.5'
+# Devise for Authentication
+gem 'devise', '~> 4.4', '>= 4.4.3'
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
