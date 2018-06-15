@@ -1,37 +1,13 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-        <% post.errors.full_messages.each do |message| %>
-          <li>
-            <%= message %>
-          </li>
-          <% end %>
-      </ul>
+<%= simple_form_for @post do |f| %>
+  <% f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :title, required: false, autofocus: true, placeholder:"Enter title of post" %>
+        <%= f.input :preview, required: false, placeholder:"Enter preview" %>
+          <%= f.input :body, placeholder:"Your content here" %>
     </div>
+
+    <div class="form-actions tn-primary">
+      <%= f.button :submit, "Create Post" %>
+    </div>
+
     <% end %>
-      <form class="sm-3">
-
-        <div class="field form-label-group" required autofocus>
-          <%= form.label :title %>
-            <%= form.text_field :title, id: :post_title, class: "form-control", placeholder:"Enter title of post" %>
-        </div>
-
-        <div class="field form-label-group">
-          <%= form.label :preview %>
-            <%= form.text_field :preview, id: :post_preview, class: "form-control", placeholder:"Enter preview" %>
-        </div>
-
-        <div class="field form-label-group">
-          <%= form.label :body %>
-            <%= form.text_area :body, id: :post_body, class: "form-control", placeholder:"Your content here" %>
-        </div>
-        <br>
-        <div class="actions btn btn-lg btn-primary btn-block">
-          <%= form.submit %>
-        </div>
-      </form>
-      <% end %>

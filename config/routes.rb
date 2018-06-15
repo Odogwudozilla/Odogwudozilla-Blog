@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :odogwus
   resources :posts
   root to: 'static_pages#home'
 
