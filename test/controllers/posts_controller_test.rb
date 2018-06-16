@@ -29,6 +29,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
+    odogwu_signed_in?
     get edit_post_url(@post)
     assert_response :success
   end

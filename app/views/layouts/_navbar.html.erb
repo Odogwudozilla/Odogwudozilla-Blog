@@ -22,16 +22,16 @@
         </li>
         <% if odogwu_signed_in? %>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin
             </a>
             <div class="dropdown-menu text-centre">
-              <a class="dropdown-item">
+              <a class="dropdown-item nav-item">
                 Signed in as
                 <%= current_odogwu.email %>
               </a>
-              <a class="dropdown-item">
-                <%= link_to 'Sign out', destroy_odogwu_session_path, :method => :delete %>
-              </a>
+
+              <%= link_to 'Sign out', destroy_odogwu_session_path, :method => :delete, class: "dropdown-item nav-item" %>
+
           </li>
           <% else %>
             <li class="nav-item">
