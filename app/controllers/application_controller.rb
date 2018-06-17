@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :authenticate_odogwu!, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_odogwu!, only: [:edit, :update, :destroy]
 end

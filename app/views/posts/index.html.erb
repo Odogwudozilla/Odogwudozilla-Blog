@@ -1,45 +1,73 @@
-<p id="notice">
-  <%= notice %>
-</p>
+<% provide(:page_title, "All Posts") %>
+  <% provide(:post_active, "active") %>
+    <p id="notice">
+      <%= notice %>
+    </p>
 
-<h1>Posts</h1>
+    <h1>Posts</h1>
+    <% if odogwu_signed_in? %>
+      <table class="table table-hover px-4">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th class="text-center">Preview</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<table class="table table-hover px-4">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Preview</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <tbody>
+          <% @posts.each do |post| %>
+            <tr>
+              <td>
+                <h5>
+                  <%= post.title %>
+                </h5>
+              </td>
+              <td>
+                <h6>
+                  <%= truncate(post.body, length: 300) %>
+                </h6>
+              </td>
 
-  <tbody class="text-justify ">
-    <% @posts.each do |post| %>
-      <tr>
-        <td>
-          <%= post.title %>
-        </td>
-        <td>
-          <%= post.preview %>
-        </td>
-        <td>
-          <%= post.body %>
-        </td>
-        <td>
-          <%= link_to 'Show', post %>
-        </td>
-        <td>
-          <%= link_to 'Edit', edit_post_path(post) %>
-        </td>
-        <td>
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-      <% end %>
-  </tbody>
-</table>
+              <td>
+                <%= link_to 'Show', post, class: "btn btn-primary" %>
+              </td>
+              <td>
+                <%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %>
+              </td>
+              <td>
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+              </td>
+            </tr>
+            <% end %>
+        </tbody>
+      </table>
 
-<br>
+      <br>
 
-<%= link_to 'New Post', new_post_path %>
+      <%= link_to 'New Post', new_post_path, class: "btn btn-success" %>
+
+
+
+        <% else %>
+          <div class="row">
+
+            <% @posts.each do |post| %>
+              <div class='col-sm-6 col-lg-4'>
+                <div class="card bg-light mb-4">
+
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <%= link_to post.title, post %>
+                    </h4>
+                    <h6 class="card-text">
+                      <%= truncate(post.body, length: 150) %>
+                        <%= link_to "Read More...", post %>
+                    </h6>
+
+                  </div>
+                </div>
+              </div>
+              <% end %>
+          </div>
+          <% end %>

@@ -2,7 +2,8 @@
 <html>
 
 <head>
-  <title>OdogwudozillaBlog</title>
+  <title>
+    <%= yield (:page_title) %> | OdogwudozillaBlog</title>
   <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

@@ -15,6 +15,8 @@ gem 'popper_js', '~> 1.11', '>= 1.11.1'
 gem 'simple_form', '~> 3.5'
 # Devise for Authentication
 gem 'devise', '~> 4.4', '>= 4.4.3'
+# Allows you to create pretty URL’s and work with human-friendly strings as if they were numeric ids for ActiveRecord models.
+gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
