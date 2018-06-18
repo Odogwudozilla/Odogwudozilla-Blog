@@ -3,19 +3,31 @@
     <p id="notice">
       <%= notice %>
     </p>
+    <div class="d-flex mb-0">
 
-    <h2 class="font-weight-bold">
-      <%= @post.title %>
-    </h2>
-
+      <div class="mr-auto">
+        <h2 class="font-weight-bold">
+          <%= @post.title %>
+        </h2>
+      </div>
+      <div class="mt-auto">
+        <small>
+          <%= @post.display_day_published %>
+        </small>
+      </div>
+    </div>
     <hr class="style17 mb-5">
 
     <div class="col-sm-10 text-justify mx-auto">
-
       <h5 class="body-text">
         <%= @post.body %>
       </h5>
     </div>
     <hr class="style18 mb-2">
-    <%= link_to 'Edit', edit_post_path(@post) %> |
-      <%= link_to 'Back', posts_path %>
+
+    <% if odogwu_signed_in? %>
+      <%= link_to 'Edit', edit_post_path(@post) %> |
+        <%= link_to 'Back', posts_path %>
+          <% else %>
+            <%= link_to 'Back', posts_path %>
+              <% end %>

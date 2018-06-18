@@ -4,13 +4,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.most_recent #Calls the most_recent scope action from the model
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.friendly.find(params[:id])
+    @post = Post.friendly.find(params[:id]) # calls the friendly_id action on the posts
   end
 
   # GET /posts/new
@@ -65,11 +65,11 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.friendly.find(params[:id])
+      @post = Post.friendly.find(params[:id]) # calls the friendly_id action on the posts
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :preview, :body)
+      params.require(:post).permit(:title, :preview, :body, :banner_image_url)
     end
 end

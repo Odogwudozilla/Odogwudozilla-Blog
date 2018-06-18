@@ -1,13 +1,19 @@
-<%= simple_form_for @post do |f| %>
-  <% f.error_notification %>
-    <div class="form-inputs">
-      <%= f.input :title, required: false, autofocus: true, placeholder:"Enter title of post" %>
-        <%= f.input :preview, required: false, placeholder:"Enter preview" %>
-          <%= f.input :body, placeholder:"Your content here" %>
-    </div>
+<div class='col-sm-6 col-lg-6'>
+  <%= simple_form_for @post do |f| %>
+    <% f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :title, required: false, autofocus: true, placeholder:"Enter title of post" %>
+          <%= f.input :banner_image_url, placeholder:"Enter an Image link" %>
+            <%= f.input :body, placeholder:"Your content here" %>
+      </div>
 
-    <div class="form-actions tn-primary">
-      <%= f.button :submit, "Create Post" %>
-    </div>
+      <div class="form-actions">
+        <% if current_page?(edit_post_path(post))%>
+          <%= f.button :submit, "Update Post" %>
+            <% else %>
+              <%= f.button :submit, "Create Post" %>
+                <% end %>
+      </div>
 
-    <% end %>
+      <% end %>
+</div>

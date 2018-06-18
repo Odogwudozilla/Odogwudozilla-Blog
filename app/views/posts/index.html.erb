@@ -50,12 +50,12 @@
 
 
         <% else %>
-          <div class="row">
+          <div class="card-group">
 
             <% @posts.each do |post| %>
               <div class='col-sm-6 col-lg-4'>
                 <div class="card bg-light mb-4">
-
+                  <div class="card-img-top" style="background-image: url(<%= post.banner_image_url %>)"></div>
                   <div class="card-body">
                     <h4 class="card-title">
                       <%= link_to post.title, post %>
@@ -65,6 +65,11 @@
                         <%= link_to "Read More...", post %>
                     </h6>
 
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">
+                      <%= post.display_day_published %>
+                    </small>
                   </div>
                 </div>
               </div>
