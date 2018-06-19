@@ -17,6 +17,12 @@ gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 # Allows you to create pretty URL’s and work with human-friendly strings as if they were numeric ids for ActiveRecord models.
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+# enabling remote multipart forms (AJAX style file uploads) with jquery-rails
+gem 'remotipart', '~> 1.4', '>= 1.4.2'
+# Rails engine that provides an easy-to-use interface for managing your data.
+gem 'rails_admin', '~> 1.3'
+# Simple authorization solution for Rails. All permissions are stored in a single location.
+gem 'cancancan', '~> 2.2'
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

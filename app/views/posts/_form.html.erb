@@ -8,10 +8,10 @@
       </div>
 
       <div class="form-actions">
-        <% if current_page?(edit_post_path(post))%>
-          <%= f.button :submit, "Update Post" %>
+        <% if current_page?(new_post_path(post)) %>
+          <%= f.button :submit, "Create Post" %>
             <% else %>
-              <%= f.button :submit, "Create Post" %>
+              <%= f.button :submit, "Update Post" %>
                 <% end %>
       </div>
 

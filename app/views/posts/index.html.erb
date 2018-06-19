@@ -5,7 +5,7 @@
     </p>
 
     <h1>Posts</h1>
-    <% if odogwu_signed_in? %>
+    <% if can? :destroy, @posts %>
       <table class="table table-hover px-4">
         <thead>
           <tr>
@@ -55,7 +55,7 @@
             <% @posts.each do |post| %>
               <div class='col-sm-6 col-lg-4'>
                 <div class="card bg-light mb-4">
-                  <div class="card-img-top" style="background-image: url(<%= post.banner_image_url %>)"></div>
+                  <div class="card-img-top mx-auto d-block" style='background-image: url(<%= post.banner_image_url %>);'></div>
                   <div class="card-body">
                     <h4 class="card-title">
                       <%= link_to post.title, post %>

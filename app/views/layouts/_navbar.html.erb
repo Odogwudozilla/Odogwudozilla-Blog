@@ -20,7 +20,7 @@
         <li class="nav-item">
           <%= link_to 'Projects', "#", class: "nav-link" %>
         </li>
-        <% if odogwu_signed_in? %>
+        <% if current_odogwu %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin
             </a>

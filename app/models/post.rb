@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
-
+  # 
   extend FriendlyId
-  friendly_id :title, use: [:slugged, :finders]
+  friendly_id :title, use: :finders
 
   # Orders the posts according to the IDs and in descending order
   scope :most_recent, -> { order(id: :desc) }

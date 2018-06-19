@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/odogwuadmin', as: 'rails_admin'
   devise_for :odogwus
   resources :posts
   root to: 'static_pages#home'
