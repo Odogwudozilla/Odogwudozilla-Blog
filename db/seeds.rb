@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Odogwu.create!(email: "admin@odogwudozilla.com",
+#   password:              "odogwu",
+#   password_confirmation: "odogwu",
+#   superadmin_role: true)
+
+# posts = Post.order(:created_at).take(6)
+50.times do
+  title = Faker::GameOfThrones.character
+  banner_image_url = Faker::Avatar.image
+  body = Faker::Lorem.paragraphs(rand(50..100)).join('\n')
+  Post.create!(title: title, banner_image_url: banner_image_url, body: body)
+end

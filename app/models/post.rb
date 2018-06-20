@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   # 
   extend FriendlyId
   friendly_id :title, use: :finders
+  WillPaginate.per_page = 9
 
   # Orders the posts according to the IDs and in descending order
   scope :most_recent, -> { order(id: :desc) }

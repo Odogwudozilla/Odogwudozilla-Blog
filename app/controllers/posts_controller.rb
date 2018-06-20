@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  WillPaginate.per_page = 9
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.most_recent #Calls the most_recent scope action from the model
+    @posts = Post.most_recent.paginate(:page => params[:page]) #Calls the most_recent scope action plus pagination from the model
   end
 
   # GET /posts/1

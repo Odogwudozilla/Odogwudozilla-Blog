@@ -23,6 +23,13 @@ gem 'remotipart', '~> 1.4', '>= 1.4.2'
 gem 'rails_admin', '~> 1.3'
 # Simple authorization solution for Rails. All permissions are stored in a single location.
 gem 'cancancan', '~> 2.2'
+# used to easily generate fake data: names, addresses, phone numbers, etc.
+gem 'faker', '~> 1.8', '>= 1.8.7'
+# simple API for performing paginated queries
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+# Integrates the Twitter Bootstrap pagination component with the will_paginate pagination gem.
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
