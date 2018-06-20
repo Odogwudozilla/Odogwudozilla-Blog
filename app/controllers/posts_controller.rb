@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate_admin!, only: [:index, :show]
+  skip_before_action :authenticate_odogwu!, only: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
  
   # GET /posts
