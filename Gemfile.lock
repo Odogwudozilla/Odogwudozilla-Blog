@@ -85,6 +85,7 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    down (4.5.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -254,6 +255,8 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     shellany (0.0.1)
+    shrine (2.11.0)
+      down (~> 4.1)
     simple_form (3.5.1)
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
@@ -262,7 +265,7 @@ GEM
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
-    sprockets (3.7.1)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.1)
@@ -274,6 +277,8 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
+    trix (0.11.1)
+      rails (> 4.1, < 5.2)
     turbolinks (5.1.1)
       turbolinks-source (~> 5.1)
     turbolinks-source (5.1.0)
@@ -328,10 +333,12 @@ DEPENDENCIES
   remotipart (~> 1.4, >= 1.4.2)
   sass-rails (~> 5.0)
   selenium-webdriver
+  shrine (~> 2.11)
   simple_form (~> 3.5)
   spring
   spring-watcher-listen (~> 2.0.1)
   sqlite3 (= 1.3.13)
+  trix (~> 0.11.1)
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

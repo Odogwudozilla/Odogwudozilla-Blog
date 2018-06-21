@@ -29,7 +29,10 @@ gem 'faker', '~> 1.8', '>= 1.8.7'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 # Integrates the Twitter Bootstrap pagination component with the will_paginate pagination gem.
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
-
+# A rich text editor for everyday writing
+gem 'trix', '~> 0.11.1'
+# a toolkit for file attachments in Ruby applications
+gem 'shrine', '~> 2.11'
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
