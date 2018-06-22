@@ -89,9 +89,13 @@ hr.style18:before {
   .flickr_pagination .next_page {
     margin-left: 1em; }
 
-a img {
-  width: 800px;
-  height: 600px;
-  display: block;
-  align-items: center;
+
+.col-sm-10 a {
+  text-align: center;
+  img {
+    width: 600px;
+    height: 400px;
+    display: block;
+  
+    }
 }

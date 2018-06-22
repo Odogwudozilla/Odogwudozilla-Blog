@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id               :integer          not null, primary key
+#  title            :string
+#  preview          :string
+#  body             :text
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  slug             :string
+#  banner_image_url :string
+#  published        :boolean          default(FALSE)
+#  published_at     :datetime
+#
+
 class Post < ApplicationRecord
   # 
   extend FriendlyId
@@ -5,13 +21,25 @@ class Post < ApplicationRecord
   WillPaginate.per_page = 9
 
   # Orders the posts according to the IDs and in descending order
-  scope :most_recent, -> { order(id: :desc) }
+  scope :most_recent, -> { order(published_at: :desc) }
+  
+  # returns only the published posts
+  scope :published, -> { where(published: true)}
 
+  # Generates friendly_id when the title of post changes
   def should_generate_new_friendly_id?
     title_changed?    
   end 
 
   def display_day_published
-    "Published on #{created_at.strftime('%-b %-d, %Y')}"
+    if published_at.present?
+      "Published #{published_at.strftime('%-b %-d, %Y')}"
+    else
+      if published?
+        "Published eons ago"
+      else
+        "Not published yet."
+      end 
+    end
   end 
 end

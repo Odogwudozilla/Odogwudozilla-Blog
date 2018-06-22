@@ -1,11 +1,15 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate_odogwu!, only: [:index, :show]
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_odogwu!, only: [:index, :show, :published_at]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
  
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.most_recent.paginate(:page => params[:page]) #Calls the most_recent scope action plus pagination from the model
+    if current_odogwu
+      @posts = Post.most_recent.paginate(:page => params[:page]) #Calls the most_recent scope action plus pagination from the model
+    else
+      @posts = Post.most_recent.published.paginate(:page => params[:page])
+    end 
   end
 
   # GET /posts/1
@@ -21,6 +25,16 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+  end
+  
+  def publish
+    @post.update(published: true, published_at: Time.now) # sets the posts to published and the time of publishing 
+    redirect_to posts_url
+  end
+
+  def unpublish
+    @post.update(published: false, published_at: nil) # sets the post to unpublished
+    redirect_to posts_url
   end
 
   # POST /posts

@@ -33,6 +33,7 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'trix', '~> 0.11.1'
 # a toolkit for file attachments in Ruby applications
 gem 'shrine', '~> 2.11'
+
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -79,6 +80,8 @@ group :development do
   # To live reload the local server
   gem 'guard'
   gem 'guard-livereload', '~> 2.5', require: false
+  # Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on the database schema.
+  gem 'annotate', '~> 2.7', '>= 2.7.4'
 
   gem 'listen', '3.1.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

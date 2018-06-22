@@ -24,20 +24,28 @@
                 </h5>
               </td>
               <td>
-                <h6>
+                <h6 class="text-justify">
                   <%= truncate(post.body, length: 300) %>
+                    <%= link_to 'Show', post, class: "" %>
+
                 </h6>
               </td>
 
               <td>
-                <%= link_to 'Show', post, class: "btn btn-primary" %>
-              </td>
-              <td>
                 <%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %>
               </td>
-              <td>
-                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-              </td>
+              <% if post.published? %>
+                <td>
+                  <%= link_to 'Unplublish', unpublish_post_path(post), method: :put, class: "btn btn-warning" %>
+                </td>
+                <% else %>
+                  <td>
+                    <%= link_to 'Publish', publish_post_path(post), method: :put, class: "btn btn-success" %>
+                  </td>
+                  <% end %>
+                    <td>
+                      <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+                    </td>
             </tr>
             <% end %>
         </tbody>
