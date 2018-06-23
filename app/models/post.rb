@@ -22,7 +22,7 @@ class Post < ApplicationRecord
   friendly_id :title, use: :finders
   WillPaginate.per_page = 9
 
-  belongs_to :odogwu
+  belongs_to :odogwu, optional: true
 
   # Orders the posts according to the IDs and in descending order
   scope :most_recent, -> { order(published_at: :desc) }

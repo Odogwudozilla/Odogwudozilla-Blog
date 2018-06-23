@@ -23,7 +23,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.published.friendly.find(params[:id]) # calls the friendly_id action on the posts
+    @post = Post.friendly.find(params[:id]) # calls the friendly_id action on the posts
   end
 
   # GET /posts/new
