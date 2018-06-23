@@ -1,20 +1,36 @@
-<div class='col-sm-6 col-lg-6'>
-  <%= simple_form_for @post do |f| %>
-    <% f.error_notification %>
-      <div class="form-inputs">
-        <%= f.input :title, required: false, autofocus: true, placeholder:"Enter title of post" %>
-          <%= f.input :banner_image_url, placeholder:"Enter an Image link" %>
-            <%= f.input :tag_list, label: "Tags", placeholder:"Enter a tag" %>
-              <%= f.input :body, as: :trix_editor, placeholder:"Your content here" %>
-      </div>
+<div class="edit row">
+  <div class="card px-4 pt-4 mr-4 col-md-4">
+    <%= simple_form_for @post do |f| %>
+      <% f.error_notification %>
+        <div class="form-inputs">
+          <%= f.input :title, required: false, autofocus: true, placeholder:"Enter title of post" %>
+            <%= f.input :banner_image_url, placeholder:"Enter an Image link" %>
+              <%= f.input :tag_list, label: "Tags", placeholder:"Enter a tag" %>
+        </div>
 
-      <div class="form-actions">
-        <% if current_page?(new_post_path(post)) %>
-          <%= f.button :submit, "Create Post" %>
+        <div class="form-actions">
+          <% if current_page?(new_post_path(post)) %>
+            <div class="px-3 pb-4 ">
+              <%= f.button :submit, "Create Post" %>
+            </div>
+            <div class="pb-4">
+              <%= link_to 'Back', posts_path %>
+            </div>
             <% else %>
-              <%= f.button :submit, "Update Post" %>
-                <% end %>
-      </div>
+              <div class="px-3 pb-4 ">
+                <%= f.button :submit, "Update Post" %>
 
+              </div>
+              <div class="pb-4">
+
+                <%= link_to 'Show', @post %> |
+                  <%= link_to 'Back', posts_path %>
+              </div>
+              <% end %>
+        </div>
+  </div>
+  <div class="card px-4 py-4 col-md-7">
+    <%= f.input :body, as: :trix_editor, placeholder:"Your content here", class: "font-weight-bold" %>
       <% end %>
+  </div>
 </div>

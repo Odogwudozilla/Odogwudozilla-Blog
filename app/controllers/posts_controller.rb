@@ -13,9 +13,9 @@ class PostsController < ApplicationController
       end  
     else
       if params[:tag].present?
-        @posts = Post.most_recent.published.tagged_with(params[:tag]).paginate(:page => params[:page])
+        @posts = Post.most_recent.published.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 10)
       else
-        @posts = Post.most_recent.published.paginate(:page => params[:page])
+        @posts = Post.most_recent.published.paginate(:page => params[:page], :per_page => 10)
       end 
     end 
   end

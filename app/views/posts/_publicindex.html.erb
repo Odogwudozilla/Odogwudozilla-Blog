@@ -1,0 +1,28 @@
+<div class="card-group">
+
+  <% @posts.each do |post| %>
+    <div class='col-sm-6 col-lg-3 mb-5'>
+      <div class="card bg-light">
+        <div class="card-img-top mx-auto d-block" style='background-image: url(<%= post.banner_image_url %>);'></div>
+        <div class="card-body py-0 my-0">
+          <h5 class="card-title pt-1 mb-1">
+            <%= link_to post.title, post %>
+          </h5>
+          <h6 class="tags text-capitalize font-weight-bold">
+            <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
+          </h6>
+          <h6 class="card-text">
+            <%= truncate(post.body, length: 70) %>
+              <%= link_to "Read More...", post %>
+          </h6>
+
+        </div>
+        <div class="card-footer py-1">
+          <small class="text-muted">
+            <%= post.display_day_published %>
+          </small>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>

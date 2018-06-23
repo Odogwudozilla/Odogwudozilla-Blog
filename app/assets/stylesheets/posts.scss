@@ -18,19 +18,46 @@
 .card-group {
   .card{
     border-radius: 10%;
-
+    .card-title a {
+      color: rgb(71, 30, 14);
+      font-family: 'Merienda', cursive;
+      text-decoration: none;
+      &:hover {
+        color: #0063dc;
+      }
+    }
+    .tags a {
+      font-size: 0.7em;
+      font-family: 'Merriweather', serif;
+    }
+    .card-text a {
+      font-size: 0.8em;
+      font-family: 'Marck Script', cursive;
+    }
   }
 }
 .card-img-top {
-  height: 100px;
+  height: 70px;
   width: 100%;
   background-size: contain;
   background-position: center;
 }
 .body-text {
-  line-height: 1.5em !important;
+  line-height: 1.7em !important;
+  font-weight: 500;
 }
 
+.edit {
+
+  .form-actions, .form-inputs {
+    font-weight: bold;
+  }
+}
+.trix-content {
+  max-height: 800px !important;
+  overflow-y: auto;
+  background: #ffffff;
+}
 
 hr.style17 {
 	border-top: 1px solid #8c8b8b;

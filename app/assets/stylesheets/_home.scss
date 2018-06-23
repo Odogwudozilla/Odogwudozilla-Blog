@@ -39,3 +39,20 @@
   }
 }
 
+#noticewrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(192, 142, 122, 0.8);
+  .alert, .notice {
+    padding: 1.14rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(2, 17, 34);
+    letter-spacing: 1px;
+  
+  }
+}

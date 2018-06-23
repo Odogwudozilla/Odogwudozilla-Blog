@@ -1,51 +1,42 @@
-<div class=" <%= controller_name %> <%= action_name %>">
-  <% if flash.any? %>
-    <% flash.keys.each do |key| %>
-      <div class="alert alert-<%= key.to_s %> alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <%= flash[key] %>
+<% provide(:page_title, "Home") %>
+  <% provide(:home_active, "active") %>
+    <div class="homepage text-center">
+      <span aspangn=center>
+        <%=image_tag("Passport.jpg")%>
+      </span>
+      <h1 class="">Chidozie Nnachor</h1>
+      <div class="">
+        <i class="fas fa-thermometer-half"></i>
+        <span>Developer --</span>
+        <i class="fas fa-thermometer-three-quarters"></i>
+        <span>Web Designer --</span>
+        <i class="fas fa-thermometer-full"></i>
+        <span>Writer</span>
+
       </div>
-      <% end %>
-        <% end %>
-          <div class="homepage text-center">
-            <span aspangn=center>
-              <%=image_tag("Passport.jpg")%>
-            </span>
-            <h1 class="">Chidozie Nnachor</h1>
-            <div class="">
-              <i class="fas fa-thermometer-half"></i>
-              <span>Developer --</span>
-              <i class="fas fa-thermometer-three-quarters"></i>
-              <span>Web Designer --</span>
-              <i class="fas fa-thermometer-full"></i>
-              <span>Writer</span>
+      <div class="icons-social">
+        <a target="_blank" href="https://github.com/Odogwudozilla">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" href="www.linkedin.com/in/chidoziennachor">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/odogwudozilla">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a target="_blank" href="https://stackoverflow.com/story/odogwudozilla">
+          <i class="fab fa-stack-overflow"></i>
+        </a>
+        <a target="_blank" href="https://medium.com/@odogwudozilla">
+          <i class="fab fa-medium"></i>
+        </a>
+        <a target="_blank" href="https://sourcerer.io/odogwudozilla">
+          <i class="fab fa-discourse"></i>
+        </a>
+        <a target="_blank" href="https://bitbucket.org/Odogwudozilla/">
+          <i class="fab fa-bitbucket"></i>
+        </a>
+      </div>
+    </div>
 
-            </div>
-            <div class="icons-social">
-              <a target="_blank" href="https://github.com/Odogwudozilla">
-                <i class="fab fa-github"></i>
-              </a>
-              <a target="_blank" href="www.linkedin.com/in/chidoziennachor">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a target="_blank" href="https://twitter.com/odogwudozilla">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a target="_blank" href="https://stackoverflow.com/story/odogwudozilla">
-                <i class="fab fa-stack-overflow"></i>
-              </a>
-              <a target="_blank" href="https://medium.com/@odogwudozilla">
-                <i class="fab fa-medium"></i>
-              </a>
-              <a target="_blank" href="https://sourcerer.io/odogwudozilla">
-                <i class="fab fa-discourse"></i>
-              </a>
-              <a target="_blank" href="https://bitbucket.org/Odogwudozilla/">
-                <i class="fab fa-bitbucket"></i>
-              </a>
-            </div>
-          </div>
-
-</div>
+    </div>

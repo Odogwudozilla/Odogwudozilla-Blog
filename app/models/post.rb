@@ -20,7 +20,7 @@ class Post < ApplicationRecord
 
   extend FriendlyId
   friendly_id :title, use: :finders
-  WillPaginate.per_page = 9
+  # WillPaginate.per_page = 9
 
   belongs_to :odogwu, optional: true
 

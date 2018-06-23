@@ -1,10 +1,6 @@
 <% provide(:page_title, "All Posts") %>
   <% provide(:post_active, "active") %>
 
-
-    <p id="notice">
-      <%= notice %>
-    </p>
     <div class="d-flex mb-0">
 
       <div class="mr-auto">
@@ -22,92 +18,11 @@
     <hr>
     <div class="post-index-odogwu px-4 pt-5">
       <% if can? :destroy, @posts %>
-        <table class="table table-hover px-4">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th class="text-center">Preview</th>
-              <th class="text-center">Actions</th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @posts.each do |post| %>
-              <tr>
-                <td>
-                  <h5>
-                    <%= post.title %>
-                  </h5>
-                </td>
-                <td>
-                  <h6 class="text-justify">
-                    <%= truncate(post.body, length: 300) %>
-                      <%= link_to 'Show', post, class: "" %>
-                        <div>
-
-                          <small class="font-weight-bold">Tags:
-                            <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
-                          </small>
-                        </div>
-
-                  </h6>
-                </td>
-
-                <td>
-                  <%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %>
-                </td>
-                <% if post.published? %>
-                  <td>
-                    <%= link_to 'Unplublish', unpublish_post_path(post), method: :put, class: "btn btn-warning" %>
-                  </td>
-                  <% else %>
-                    <td>
-                      <%= link_to 'Publish', publish_post_path(post), method: :put, class: "btn btn-success" %>
-                    </td>
-                    <% end %>
-                      <td>
-                        <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-                      </td>
-              </tr>
-              <% end %>
-          </tbody>
-        </table>
-
-        <%= link_to 'New Post', new_post_path, class: "btn btn-success" %>
-
-
+        <%= render 'odogwuindex' %>
 
           <% else %>
-            <div class="card-group">
-
-              <% @posts.each do |post| %>
-                <div class='col-sm-6 col-lg-4 mb-5'>
-                  <div class="card bg-light">
-                    <div class="card-img-top mx-auto d-block" style='background-image: url(<%= post.banner_image_url %>);'></div>
-                    <div class="card-body py-0 my-0">
-                      <h5 class="card-title pt-1">
-                        <%= link_to post.title, post %>
-                      </h5>
-                      <small>
-                        <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
-                      </small>
-                      <h6 class="card-text">
-                        <%= truncate(post.body, length: 150) %>
-                          <%= link_to "Read More...", post %>
-                      </h6>
-
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-muted">
-                        <%= post.display_day_published %>
-                      </small>
-                    </div>
-                  </div>
-                </div>
-                <% end %>
-            </div>
-            <% end %>
+            <%= render 'publicindex' %>
+              <% end %>
     </div>
 
     <%= will_paginate @posts, inner_window: 2, outer_window: 1, class: "flickr_pagination" %>

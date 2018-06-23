@@ -9,19 +9,34 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-        <link href="https://fonts.googleapis.com/css?family=Marck+Script|Merienda:700|Iceberg|Raleway+Dots|Merriweather:400,400i,700|Montserrat:300,400,700"
+        <link href="https://fonts.googleapis.com/css?family=Marck+Script|Merienda:700|Iceberg|Raleway+Dots|Merriweather:400,400i,700|Montserrat:300,500,900"
           rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
           crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="container wrapper">
-    <%= render 'layouts/navbar' %>
-      <%= yield %>
-  </div>
-  <!-- <%= render 'layouts/footer' %> -->
-  <script id="dsq-count-scr" src="//odogwudozilla.disqus.com/count.js" async></script>
+
+  <% if notice %>
+    <div id="noticewrapper">
+      <p class="notice">
+        <%= notice %>
+      </p>
+    </div>
+
+    <% elsif alert %>
+      <div id="noticewrapper">
+        <p class="alert">
+          <%= alert %>
+        </p>
+      </div>
+      <% end %>
+        <div class="container wrapper">
+          <%= render 'layouts/navbar' %>
+            <%= yield %>
+        </div>
+        <!-- <%= render 'layouts/footer' %> -->
+        <script id="dsq-count-scr" src="//odogwudozilla.disqus.com/count.js" async></script>
 </body>
 
 </html>
