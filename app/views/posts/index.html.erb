@@ -20,7 +20,7 @@
     </div>
 
     <hr>
-    <div class="post-index px-4 pt-5">
+    <div class="post-index-odogwu px-4 pt-5">
       <% if can? :destroy, @posts %>
         <table class="table table-hover px-4">
           <thead>
@@ -44,6 +44,12 @@
                   <h6 class="text-justify">
                     <%= truncate(post.body, length: 300) %>
                       <%= link_to 'Show', post, class: "" %>
+                        <div>
+
+                          <small class="font-weight-bold">Tags:
+                            <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
+                          </small>
+                        </div>
 
                   </h6>
                 </td>
@@ -68,8 +74,6 @@
           </tbody>
         </table>
 
-        <br>
-
         <%= link_to 'New Post', new_post_path, class: "btn btn-success" %>
 
 
@@ -85,6 +89,9 @@
                       <h5 class="card-title pt-1">
                         <%= link_to post.title, post %>
                       </h5>
+                      <small>
+                        <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
+                      </small>
                       <h6 class="card-text">
                         <%= truncate(post.body, length: 150) %>
                           <%= link_to "Read More...", post %>

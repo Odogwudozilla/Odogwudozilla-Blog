@@ -15,7 +15,9 @@
 #
 
 class Post < ApplicationRecord
-  # 
+  acts_as_taggable # Alias for acts_as_taggable_on :tags
+  acts_as_taggable_on :technology, :programming
+
   extend FriendlyId
   friendly_id :title, use: :finders
   WillPaginate.per_page = 9

@@ -33,7 +33,8 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'trix', '~> 0.11.1'
 # a toolkit for file attachments in Ruby applications
 gem 'shrine', '~> 2.11'
-
+# Tag a single model on several contexts, such as skills, interests, and awards
+gem 'acts-as-taggable-on', '~> 6.0'
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

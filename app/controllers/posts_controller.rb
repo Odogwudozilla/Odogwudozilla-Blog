@@ -6,16 +6,24 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if current_odogwu
-      @posts = Post.most_recent.paginate(:page => params[:page]) #Calls the most_recent scope action plus pagination from the model
+      if params[:tag].present?
+        @posts = Post.most_recent.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 30)
+      else
+        @posts = Post.most_recent.paginate(:page => params[:page], :per_page => 30) #Calls the most_recent scope action plus pagination from the model
+      end  
     else
-      @posts = Post.most_recent.published.paginate(:page => params[:page])
+      if params[:tag].present?
+        @posts = Post.most_recent.published.tagged_with(params[:tag]).paginate(:page => params[:page])
+      else
+        @posts = Post.most_recent.published.paginate(:page => params[:page])
+      end 
     end 
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.friendly.find(params[:id]) # calls the friendly_id action on the posts
+    @post = Post.published.friendly.find(params[:id]) # calls the friendly_id action on the posts
   end
 
   # GET /posts/new
@@ -85,6 +93,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :preview, :body, :banner_image_url)
+      params.require(:post).permit(:title, :preview, :body, :banner_image_url, :tag_list)
     end
 end
