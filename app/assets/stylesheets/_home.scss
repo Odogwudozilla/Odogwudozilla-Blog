@@ -1,49 +1,40 @@
-// container for the homebage background image
-.homepage {
-  background-image: image-url('pendant.jpg');
-  background-size: 100%;
-  flex: 1 0 auto;
+// container for the homebage background
+.wrapper {
+  padding-top: 70px;
   position: relative;
-  
+  margin-bottom: 20px;
 }
-  //  The flex for pushing the footer to the bottom of the page
 
+.homepage {
+  padding: 70px;
 
-// .row-home {
-//   margin-top: 100px;
-// }
-.namewrapper {
-    background-color: transparent;
-    -webkit-transform: matrix(1,0,0,1,60,200);
-    -moz-transform: matrix(1,0,0,1,60,200px);
-    -ms-transform: matrix(1,0,0,1,60,200);
-    -o-transform: matrix(1,0,0,1,60,200);
-    transform: matrix(1,0,0,1,60,200);
-  .card-home {
-    font-family: 'Merienda', cursive;
-    font-size: 1.5em;
-    width: 240px !important;
-    height: 100px;
-    background-color: antiquewhite;
-    text-shadow: 0px -1px 1px #494545;
-    color: rgb(58, 57, 57);
-    padding:5px 50px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-    background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* firefox */
-    border: solid rgb(163, 162, 162) 3px;
-    box-shadow: 0 1px 2px #fff, 0 -1px 1px #666, inset 0 -1px 1px 
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid $accent-color;
   }
-  ul {
-    list-style-type: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    
+  h1 {
+    font-family: 'Iceberg', cursive;
+    font-size: 3em;
+    margin-bottom: 0;
+    padding-bottom: 0px;
   }
-  
+  span {
+    font-family: 'Raleway Dots', cursive;
+    font-weight: bold;
+  }
 }
-.icons-social i {
-  font-size: 3em;
+.icons-social  {
+  padding-top: 10px;
+  
+  i {
+    font-size: 2em;
+    color: $accent-color;
+    padding-right: 10px;
+    &:hover {
+      color: #007BFF;
+    }
+  }
 }
 

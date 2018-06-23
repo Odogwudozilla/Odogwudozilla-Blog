@@ -8,7 +8,7 @@ nav {
 .navbar {
     border-radius: 0;
     margin-bottom:0;
-    background-color: rgba(4, 6, 21, 0.96);
+    // background-color: rgba(172, 179, 236, 0.96);
     .navbar-brand {
         font-weight: bolder;
         color: $accent-color;
@@ -20,7 +20,7 @@ nav {
             height: 40px;
             width: 40px;
             border-radius: 50%;
-            border: 1px solid $primary-color-light;
+            border: 1px solid $accent-color;
           }
         
     }
@@ -28,9 +28,12 @@ nav {
         outline: none;
     }
     .nav-link {
-      color: $primary-color-light !important;
+      color: $primary-color-dark !important;
       &.active {
-        color: $primary-color-text !important;
+        color: rgb(91, 12, 116) !important;
+      }
+      &:hover {
+        color: #007BFF !important;
       }
       
     }
@@ -80,6 +83,16 @@ nav {
       
       &:hover {
           background-color: $accent-color;
-        color: $accent-color;
+          color: $accent-color;
       }
+}
+
+.search-bar{
+    font-size: 0.8em;
+    input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        opacity: 0.7;
+    }
 }
