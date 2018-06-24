@@ -11,15 +11,17 @@ class Ability
         can :access, :rails_admin       # only allow admin users to access Rails Admin
         can :dashboard                  # allow access to dashboard
       end
-      # sets specific roles for the technician
+      # sets specific roles for the junioradmin
       if odogwu.junioradmin_role?
-        can :manage, Post
-        cannot :destroy, Post
+        can :manage, Post, odogwu_id: odogwu.id
+        can :update, Post
+        cannot :destroy, :all
+        can :destroy, Post, odogwu_id: odogwu.id
       end
 
       if odogwu.user_role?
-        can :read, Post
-        cannot :destroy, Post
+        can :read, :all
+        cannot :destroy,:all
       end
     #
     # The first argument to `can` is the action you are giving the user

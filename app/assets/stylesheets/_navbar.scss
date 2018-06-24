@@ -94,5 +94,13 @@ nav {
         outline: 0;
         background: transparent;
         opacity: 0.7;
+        max-width: 100px;
     }
+    a i {
+        color: rgb(91, 12, 116) !important;
+        &:hover {
+            color: #007BFF !important;
+        }
+    }
+
 }

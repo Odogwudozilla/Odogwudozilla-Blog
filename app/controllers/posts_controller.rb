@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_odogwu!, only: [:index, :show, :published_at]
   before_action :set_post, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
- 
+  load_and_authorize_resource
   # GET /posts
   # GET /posts.json
   def index
@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = current_odogwu.posts.build #creates a new book with the current user id
   end
 
   # GET /posts/1/edit
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_odogwu.posts.build(post_params)
 
     respond_to do |format|
       if @post.save
@@ -80,7 +80,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to posts_url, notice: 'Post was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -93,6 +93,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :preview, :body, :banner_image_url, :tag_list)
+      params.require(:post).permit(:title, :preview, :body, :banner_image_url, :tag_list, :role)
     end
 end

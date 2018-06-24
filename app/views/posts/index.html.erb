@@ -17,7 +17,7 @@
 
     <hr>
     <div class="post-index-odogwu px-4 pt-5">
-      <% if can? :destroy, @posts %>
+      <% if can? :manage, Post %>
         <%= render 'odogwuindex' %>
 
           <% else %>
