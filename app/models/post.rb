@@ -16,13 +16,14 @@
 
 class Post < ApplicationRecord
   acts_as_taggable # Alias for acts_as_taggable_on :tags
-  acts_as_taggable_on :technology, :programming
+  
 
   extend FriendlyId
   friendly_id :title, use: :finders
   # WillPaginate.per_page = 9
 
   belongs_to :odogwu, optional: true
+  belongs_to :category
 
   # Orders the posts according to the IDs and in descending order
   scope :most_recent, -> { order(published_at: :desc) }

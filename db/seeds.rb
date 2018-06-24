@@ -9,11 +9,14 @@
 #   password:              "odogwu",
 #   password_confirmation: "odogwu",
 #   superadmin_role: true)
-
+# (rand(10..30)).join('.')
+# body = Faker::Lorem.paragraphs(rand(50..100)).join('\n')
 # posts = Post.order(:created_at).take(6)
-50.times do
-  title = Faker::GameOfThrones.character
+5.times do
+  title = Faker::LordOfTheRings.character
   banner_image_url = Faker::Avatar.image
-  body = Faker::Lorem.paragraphs(rand(50..100)).join('\n')
-  Post.create!(title: title, banner_image_url: banner_image_url, body: body)
+  body = Faker::Lorem.paragraphs(rand(10..15))
+  category = Faker::Number.between(1, 5)
+  author = Faker::Number.between(1, 2)
+  Post.create!(title: title, banner_image_url: banner_image_url, body: body, category_id: category, odogwu_id: author)
 end

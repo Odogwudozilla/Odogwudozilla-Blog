@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180624142304) do
+ActiveRecord::Schema.define(version: 20180624181721) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "clan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -61,6 +67,7 @@ ActiveRecord::Schema.define(version: 20180624142304) do
     t.boolean "published", default: false
     t.datetime "published_at"
     t.integer "odogwu_id"
+    t.integer "category_id"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 

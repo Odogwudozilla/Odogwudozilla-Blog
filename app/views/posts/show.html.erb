@@ -16,6 +16,12 @@
           </h2>
         </div>
         <div class="mr">
+          <small>Category:
+            <%= link_to @post.category.clan %>
+
+          </small>
+        </div>
+        <div class="mr">
           <small>
             <%= @post.display_day_published %>
           </small>
