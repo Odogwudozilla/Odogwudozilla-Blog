@@ -37,6 +37,7 @@ gem 'shrine', '~> 2.11'
 gem 'acts-as-taggable-on', '~> 6.0'
 # frameworks for multiple-provider authentication.
 gem 'omniauth-facebook'
+gem 'omniauth-github'
 # Simple Rails app key configuration
 gem "figaro"
 # *********** My added gems END here: **********************************

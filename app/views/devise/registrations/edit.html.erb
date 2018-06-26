@@ -24,7 +24,9 @@
 
                   <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it",  wrapper_html: { class: 'h6' },  required: false %>
                     <%= f.input :password_confirmation, required: false %>
+                    <% if f.object.encrypted_password.present? %>
                       <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+                      <% end %>
           </div>
 
           <div class="form-actions">

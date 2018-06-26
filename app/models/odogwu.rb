@@ -25,22 +25,38 @@ class Odogwu < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, 
-         :omniauthable, :omniauth_providers => [:facebook]
+         :omniauthable, :omniauth_providers => [:facebook, :github] # devise functionality for the Omniauth providers
 
   has_many :posts
 
-  def self.from_omniauth(auth)
+  def self.from_omniauth(auth) # checks the credentials from the omniauth provider
     where(provider: auth.provider, uid: auth.uid).first_or_create do |odogwu|
       odogwu.email = auth.info.email
       odogwu.password = Devise.friendly_token[0,20]
     end
   end
 
-  def self.new_with_session(params, session)
-    super.tap do |odogwu|
-      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-        odogwu.email = data["email"] if odogwu.email.blank?
+  def self.new_with_session(params, session) #for Omniauth
+      if session["devise.odogwu_attributes"]
+        new(session["devise.odogwu_attributes"]) do |odogwu|
+          odogwu.attributes = params
+          odogwu.valid?
+        end
+      else
+        super 
       end
-    end
   end
+  def password_required?
+    super && provider.blank?
+  end 
+
+  def update_with_password(params, *options) # checks if the encrypted paswrod for omniauth is present
+    if encrypted_password.blank?
+      update_attributes(params, *options)
+    else
+      super
+    end
+    
+  end
+  
 end

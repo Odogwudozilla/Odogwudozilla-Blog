@@ -1,14 +1,16 @@
 class Odogwus::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  def facebook
+  def all_Omnis
     @odogwu = Odogwu.from_omniauth(request.env["omniauth.auth"])
     if @odogwu.persisted?
+      flash.notice = "Signed in"
       sign_in_and_redirect @odogwu
-      set_flash_message(:notice, :success, kind: "Facebook") if is_navigational_format?
+      
     else
-      session["devise.facebook_data"] = request.env["omniauth.auth"]
+      session["devise.odogwu_attributes"] = @odogwu.attributes
       redirect_to new_odogwu_registration_url
     end
   end
+  [:facebook, :github].each{|ali| alias_method ali, :all_Omnis} 
 
   def failure
     redirect_to root_path
