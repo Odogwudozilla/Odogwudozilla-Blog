@@ -35,6 +35,10 @@ gem 'trix', '~> 0.11.1'
 gem 'shrine', '~> 2.11'
 # Tag a single model on several contexts, such as skills, interests, and awards
 gem 'acts-as-taggable-on', '~> 6.0'
+# frameworks for multiple-provider authentication.
+gem 'omniauth-facebook'
+# Simple Rails app key configuration
+gem "figaro"
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

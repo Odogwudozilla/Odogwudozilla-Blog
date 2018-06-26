@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180624181721) do
+ActiveRecord::Schema.define(version: 20180626101543) do
 
   create_table "categories", force: :cascade do |t|
     t.string "clan"
@@ -46,8 +46,12 @@ ActiveRecord::Schema.define(version: 20180624181721) do
     t.boolean "superadmin_role", default: false
     t.boolean "junioradmin_role", default: false
     t.boolean "user_role", default: true
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_odogwus_on_email", unique: true
+    t.index ["provider"], name: "index_odogwus_on_provider"
     t.index ["reset_password_token"], name: "index_odogwus_on_reset_password_token", unique: true
+    t.index ["uid"], name: "index_odogwus_on_uid"
   end
 
   create_table "photo_uploads", force: :cascade do |t|
