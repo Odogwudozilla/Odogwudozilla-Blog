@@ -19,7 +19,7 @@
           </td>
           <td>
             <h6 class="text-justify">
-              <%= truncate(post.body, length: 300) %>
+              <%= truncate(strip_tags(post.body), length: 300) %>
                 <%= link_to 'Show', post, class: "" %>
                   <div>
 

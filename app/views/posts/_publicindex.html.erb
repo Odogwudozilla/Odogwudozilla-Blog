@@ -1,18 +1,19 @@
-<div class="card-group">
+<div class="row public-cards">
 
   <% @posts.each do |post| %>
-    <div class='col-sm-6 col-lg-3 mb-5'>
+    <div class='col-sm-6 col-lg-3 mb-5 d-flex align-items-stretch'>
       <div class="card bg-light">
         <div class="card-img-top mx-auto d-block" style='background-image: url(<%= post.banner_image_url %>);'></div>
         <div class="card-body py-0 my-0">
           <h5 class="card-title pt-1 mb-1">
             <%= link_to post.title, post %>
           </h5>
-          <h6 class="tags text-capitalize font-weight-bold">
+          <h6 class="tags text-capitalize mb-0 text-center">
             <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
           </h6>
+          <hr class="my-0 pb-1">
           <h6 class="card-text">
-            <%= truncate(post.body, length: 70) %>
+            <%=  truncate(strip_tags(post.body), length: 150) %>
               <%= link_to "Read More...", post %>
           </h6>
 

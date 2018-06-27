@@ -20,13 +20,15 @@
         </li>
         <% if current_odogwu %>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin
+            <a class="nav-link dropdown-toggle text-capitalize" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-user-circle"></i>
             </a>
             <div class="dropdown-menu text-centre">
               <a class="dropdown-item nav-item">
                 Signed in as
                 <%= current_odogwu.email %>
               </a>
+              
+              <%= link_to current_odogwu.username, edit_odogwu_registration_path, :method => :get, class: "dropdown-item nav-item" %>
 
               <%= link_to 'Sign out', destroy_odogwu_session_path, :method => :delete, class: "dropdown-item nav-item" %>
 

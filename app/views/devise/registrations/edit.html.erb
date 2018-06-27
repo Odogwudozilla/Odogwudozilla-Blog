@@ -14,8 +14,11 @@
         <%= f.error_notification %>
 
           <div class="form-inputs">
-            <%= f.input :email, required: true, autofocus: true, wrapper_html: { class: 'h6' } %>
-
+          <% if current_odogwu.username == nil %>
+            <%= f.input :username, required: true %>
+          <% else %>
+            <%= f.input :username, required: false %>
+<% end %>
               <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                 <p>Currently waiting confirmation for:
                   <%= resource.unconfirmed_email %>
@@ -27,6 +30,12 @@
                     <% if f.object.encrypted_password.present? %>
                       <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
                       <% end %>
+                      <div class="">
+                      <h6>Other information<h6>
+                                <%= f.input :firstname, required: false %>
+                                <%= f.input :lastname, required: false %>
+
+                      </div>
           </div>
 
           <div class="form-actions">

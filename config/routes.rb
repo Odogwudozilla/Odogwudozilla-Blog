@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   resources :photo_uploads
   mount RailsAdmin::Engine => '/odogwuadmin', as: 'rails_admin'
-  devise_for :odogwus, controllers: { omniauth_callbacks: "odogwus/omniauth_callbacks" }
+  devise_for :odogwus, controllers: { sessions: 'odogwus/sessions',
+                                      omniauth_callbacks: "odogwus/omniauth_callbacks" }
   
   resources :posts do
     put 'publish' => 'posts#publish', on: :member
