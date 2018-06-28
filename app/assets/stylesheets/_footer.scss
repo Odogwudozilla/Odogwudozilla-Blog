@@ -1,5 +1,8 @@
-.footer {
-  height: 40px;
-  border-top-style: solid;
-  background-color: $secondary-text-color;
+footer {
+  background-color: rgb(31, 14, 14) !important;
+  height: 150px !important;
+  margin-top: 300px;
+  .footer-row {
+    color: rgb(253, 253, 253) !important;
+  }
 }

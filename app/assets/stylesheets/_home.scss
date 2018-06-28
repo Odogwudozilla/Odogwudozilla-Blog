@@ -1,40 +1,39 @@
 // container for the homebage background
 .wrapper {
   padding-top: 70px;
-  
   position: relative;
   margin-bottom: 20px;
 }
 
 .homepage {
-  padding: 70px;
-
+  padding-top: 70px;
+  padding-bottom: 5px;
   img {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    border: 1px solid #A37A6A;
+    border: 1px solid #a37a6a;
   }
   h1 {
-    font-family: 'Iceberg', cursive;
+    font-family: "Iceberg", cursive;
     font-size: 3em;
     margin-bottom: 0;
     padding-bottom: 0px;
   }
   span {
-    font-family: 'Raleway Dots', cursive;
+    font-family: "Raleway Dots", cursive;
     font-weight: bold;
   }
 }
-.icons-social  {
+
+.icons-social {
   padding-top: 10px;
-  
   i {
     font-size: 2em;
-    color: #A37A6A;
+    color: #a37a6a;
     padding-right: 10px;
     &:hover {
-      color: #007BFF;
+      color: #007bff;
     }
   }
 }
@@ -45,7 +44,8 @@
   width: 100%;
   z-index: 999;
   background: rgba(192, 142, 122, 0.8);
-  .alert, .notice {
+  .alert,
+  .notice {
     padding: 1.14rem 0;
     text-align: center;
     margin: 0;
@@ -53,6 +53,81 @@
     font-weight: 700;
     color: rgb(2, 17, 34);
     letter-spacing: 1px;
-  
   }
+}
+.summary {
+  background: none;
+  border: none;
+}
+.splash {
+  position: relative;
+  background-color: rgba(230, 239, 247, 0.2);
+  .image-left {
+    position: relative;
+    opacity: 0.9;
+    max-height: 525px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+      0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    img {
+      width: 100%;
+    }
+  }
+  .timeline-container-left {
+    position: relative;
+    left: 0;
+    border-radius: 0 !important;
+    margin: 0 -2px;
+  }
+
+  .timeline-container {
+    position: relative;
+    padding: 10px 40px;
+    width: 100%;
+    .timeline {
+      background-color: #ffff !important;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+        0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+      left: -27px;
+    }
+  }
+}
+// Quote tick
+div.timeline-container::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 5px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+// Round peg
+div.timeline-container::after {
+  left: -27px;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: white;
+  border: 4px solid rgba(122, 87, 72, 0.8);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+// Black poll line
+.portfolio {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #3f4042;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: -3px;
 }

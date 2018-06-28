@@ -1,13 +1,19 @@
-
 // font-family: 'Merienda', cursive;
 // font-family: 'Raleway Dots', cursive;
 // font-family: 'Marck Script', cursive;
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: $primary-text-color;
 }
 
-h1, .card-title {
+h1,
+.card-title {
   font-weight: bold;
 }
 
@@ -16,17 +22,20 @@ h6 {
   font-weight: 300;
 }
 
-h1, h2, h3, {
-  font-family: 'Merienda', cursive;
-
+h1,
+h2,
+h3 {
+  font-family: "Merienda", cursive;
 }
 
-h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
 }
 
-p, p span {
-  font-family: 'Merriweather', serif;
+p,
+p span {
+  font-family: "Merriweather", serif;
   font-size: 20px;
 }
-

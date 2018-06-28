@@ -8,11 +8,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   height: 100%;
-  
 }
 
 /* Sections
@@ -24,10 +23,10 @@
 
 body {
   background-color: rgb(233, 226, 238);
-  padding:0;
-  margin:0;
-  top:0;
-  left:0;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -36,9 +35,6 @@ body {
   margin: 0 auto;
 }
 
-.footer{
-  flex-shrink: 0;
-}
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -181,7 +177,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -191,7 +188,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
