@@ -1,0 +1,31 @@
+<% provide(:page_title, "Projects") %>
+  <% provide(:projects_active, "active") %>
+
+    <div class="projects">
+      <h1 class="pl-5">Projects</h1>
+      <hr class="style17">
+      <div class="card p-4">
+        <h6>
+          Thanks for being here. Find below the projects that I have been involved in.
+          <hr> </h6>
+
+        <div class="row m-4 p-3 sruc">
+          <div class="srucimage col-sm-12 col-md-4 col-lg-5 text-center px-0">
+            <a href="https://sruc.herokuapp.com">
+              <%=image_tag("SRUC.jpg")%>
+            </a>
+          </div>
+          <div class="sruc-text col-sm-12 col-md-8 col-lg-7 ">
+            <h6>
+              This is a database management system for the Scottish Rural college. The web application streamlines data collation for the
+              College and provides a framework for centralising data gathering from technicians in the fileds and the admin
+              staff in the offices. It also provides visualisation for data curated for public consumption.
+              <br>
+              <br> The framework was developed using Ruby on Rails, Javascript (Ajax) and MYSQL. It is still a work in progress.
+              You can view it
+              <a target="_blank" href="https://sruc.herokuapp.com">here.</a>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -10,7 +10,7 @@ class PostsController < ApplicationController
       if params[:tag].present?
         @posts = Post.most_recent.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 30)
       else
-        @posts = Post.most_recent.paginate(:page => params[:page], :per_page => 30) #Calls the most_recent scope action plus pagination from the model
+        @posts = Post.date_created.paginate(:page => params[:page], :per_page => 30) #Calls the most_recent scope action plus pagination from the model
       end  
     else
       if params[:tag].present?
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = current_odogwu.posts.build #creates a new book with the current user id
+    @post = current_odogwu.posts.build #creates a new post with the current user id
    
   end
 

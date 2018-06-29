@@ -31,22 +31,15 @@
         </p>
       </div>
       <% end %>
+
         <div class="container wrapper">
           <%= render 'layouts/navbar' %>
             <%= yield %>
         </div>
-        <!-- <%= render 'layouts/footer' %> -->
-        <script id="dsq-count-scr" src="//odogwudozilla.disqus.com/count.js" async></script>
-</body>
-<footer id="footer">
 
-  <div class="container row my-2">
-    <div class="footer-row">
-      <h5>Contact me</h5>
-    </div>
-    <div class="footer-row"></div>
-    <div class="footer-row"></div>
-  </div>
-</footer>
+        <%= render 'layouts/footer' %>
+          <script id="dsq-count-scr" src="//odogwudozilla.disqus.com/count.js" async></script>
+</body>
+
 
 </html>

@@ -25,6 +25,7 @@ class Post < ApplicationRecord
   belongs_to :odogwu, optional: true
   belongs_to :category
 
+  scope :date_created, -> { order(created_at: :desc)}
   # Orders the posts according to the IDs and in descending order
   scope :most_recent, -> { order(published_at: :desc) }
   

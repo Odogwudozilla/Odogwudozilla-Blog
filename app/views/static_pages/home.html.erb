@@ -1,6 +1,6 @@
 <% provide(:page_title, "Home") %>
   <% provide(:home_active, "active") %>
-    <div class="homepage text-center mb-5">
+    <div class="homepage text-center ">
       <span class="center">
         <%=image_tag("Passport.jpg")%>
       </span>
@@ -37,17 +37,34 @@
         </a>
       </div>
     </div>
+    <hr class="style17">
     <div class="summary card m-2 p-5">
-      <div class="summary-text container">
-        <h5>
-          I am a fledgling social scientist with 5+ experience in the professional and business sector, a keen interest in breaking
-          new grounds in Information Technology and Business Analytics. I am especially interested in using technology to
-          both predict and change behaviour positively and building efficient data systems.
-        </h5>
+      <div class="summary-text container ">
+        <h6>
+          Hey there!
+          <br>
+          <br> Welcome to my portfolio and blog page.
+          <br> I am a fledgling web developer with a keen interest in breaking new grounds in Information Technology and Business
+          Analytics. I am especially interested in using technology to both predict and change behaviour positively and building
+          efficient data systems.
+          <br> You can checkout my
+          <a href="#portfolio">career timeline</a>
+          <br>
+          <br> I enlisted into the Software/Technology sector (a journey which began precisely November 2017) in a career shift
+          that is better attuned to my interests, and so far, the road, though rough, has been worth every yard of it. My
+          primary programming language is Ruby. I'm probably not a
+          <a target="_blank" href="https://www.amazon.co.uk/Well-Grounded-Rubyist-David-Black/dp/1933988657/ref=sr_1_2?ie=UTF8&qid=1530229644&sr=8-2&keywords=the+well+grounded+rubyist">well-grounded rubyist</a> yet, but I know enough to develop a fully functional web application, like this site.
+          <br>
+          <br> Feel free to have a look at my
+          <%= link_to 'Blog', posts_path %>.
+        </h6>
+
+
       </div>
 
     </div>
     <div class="timeline-header">
+      <hr class="style17">
       <h2 class="mb-0 text-center">
         Career Timeline
       </h2>
@@ -72,7 +89,7 @@
 
       <div class="col-lg-7 col-md-6 col-sm-12">
         <div class="portfolio"></div>
-
+        <a class="anchor" id="portfolio"></a>
         <div class="timeline-container">
           <div class="timeline card p-4">
             <h4>Currently...</h4>
@@ -87,7 +104,13 @@
           <div class="timeline card p-4">
             <h4>2017 - 2018</h4>
             <h6>MSc,
-              <a target="_blank" href="https://www.abdn.ac.uk/study/postgraduate-taught/degree-programmes/133/information-technology/">Information Technology,</a> University of Aberdeen</h6>
+              <a target="_blank" href="https://www.abdn.ac.uk/study/postgraduate-taught/degree-programmes/133/information-technology/">Information Technology,</a> University of Aberdeen
+              <ul>
+                <li>Agile Software Development</li>
+                <li>Programming with Ruby</li>
+                <li>Test-Driven Development</li>
+              </ul>
+            </h6>
           </div>
         </div>
 

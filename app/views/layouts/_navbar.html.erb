@@ -16,21 +16,22 @@
           <%= link_to 'Blog', posts_path, class: "nav-link #{yield(:post_active)}" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Projects', "#", class: "nav-link" %>
+          <%= link_to 'Projects', static_pages_projects_path, class: "nav-link #{yield(:projects_active)}" %>
         </li>
         <% if current_odogwu %>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-capitalize" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-user-circle"></i>
+            <a class="nav-link dropdown-toggle text-capitalize" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="far fa-user-circle"></i>
             </a>
             <div class="dropdown-menu text-centre">
               <a class="dropdown-item nav-item">
                 Signed in as
                 <%= current_odogwu.email %>
               </a>
-              
+
               <%= link_to current_odogwu.username, edit_odogwu_registration_path, :method => :get, class: "dropdown-item nav-item" %>
 
-              <%= link_to 'Sign out', destroy_odogwu_session_path, :method => :delete, class: "dropdown-item nav-item" %>
+                <%= link_to 'Sign out', destroy_odogwu_session_path, :method => :delete, class: "dropdown-item nav-item" %>
 
           </li>
           <% else %>
@@ -40,10 +41,6 @@
 
             <% end %>
 
-
-              <li class="nav-item">
-                <%= link_to 'Contact', static_pages_contact_path, class: "nav-link #{yield(:contact_active)}" %>
-              </li>
 
       </ul>
       <form class="form-inline my-lg-0 search-bar">

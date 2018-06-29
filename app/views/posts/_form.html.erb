@@ -3,10 +3,10 @@
     <%= simple_form_for @post do |f| %>
       <% f.error_notification %>
         <div class="form-inputs">
-          <% if current_page?(edit_post_path(post)) %>
-            <%= f.select :category_id, @categories %>
+          <% if current_page?(new_post_path(post)) %>
+            <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
               <% else %>
-                <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
+                <%= f.select :category_id, @categories %>
                   <% end %>
                     <%= f.input :title, required: false, autofocus: true, placeholder:"Enter title of post" %>
                       <%= f.input :banner_image_url, placeholder:"Enter an Image link" %>
