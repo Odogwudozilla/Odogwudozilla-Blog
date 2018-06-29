@@ -14,7 +14,9 @@
           <h2 class="font-weight-bold">
             <%= @post.title %>
           </h2>
-          <h6>Authur: <%= @post.odogwu.firstname %> <%= @post.odogwu.lastname %>
+          <h6>Authur:
+            <%= @post.odogwu.try (:firstname) %>
+              <%= @post.odogwu.try(:lastname) %>
         </div>
         <div class="mr">
           <small>Category:

@@ -50,7 +50,7 @@ class Odogwu < ApplicationRecord
     super && provider.blank?
   end 
 
-  def update_with_password(params, *options) # checks if the encrypted paswrod for omniauth is present
+  def update_with_password(params, *options) # checks if the encrypted pasword for omniauth is present
     if encrypted_password.blank?
       update_attributes(params, *options)
     else
