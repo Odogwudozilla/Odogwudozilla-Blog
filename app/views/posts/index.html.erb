@@ -1,7 +1,7 @@
 <% provide(:page_title, "All Posts") %>
   <% provide(:post_active, "active") %>
 
-    <div class="d-flex mb-0">
+    <div class="d-flex mb-0 px-4">
 
       <div class="mr-auto">
         <h2 class="font-weight-bold">
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <hr>
+    <hr class="mt-0">
     <div class="post-index-odogwu px-4 pt-5">
       <% if can? :manage, Post %>
         <%= render 'odogwuindex' %>

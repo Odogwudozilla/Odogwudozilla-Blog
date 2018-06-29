@@ -19,7 +19,7 @@
     border-radius: 5%;
     .card-title a {
       color: rgb(71, 30, 14);
-      font-family: 'Merienda', cursive;
+      font-family: "Merienda", cursive;
       text-decoration: none;
       &:hover {
         color: #0063dc;
@@ -27,13 +27,13 @@
     }
     .tags a {
       font-size: 0.8em;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
     }
     .card-text {
       font-size: 0.8em;
       a {
         font-size: 0.8em;
-        font-family: 'Marck Script', cursive;
+        font-family: "Marck Script", cursive;
       }
     }
   }
@@ -48,7 +48,7 @@
 
 .body-text {
   line-height: 1.7em !important;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 // the edit form
@@ -71,7 +71,7 @@ hr.style17 {
 }
 
 hr.style17:after {
-  content: '§';
+  content: "§";
   display: inline-block;
   position: relative;
   top: -14px;
