@@ -16,7 +16,7 @@
 
 .public-cards {
   .card {
-    border-radius: 5%;
+    // border-radius: 5%;
     .card-title a {
       color: rgb(71, 30, 14);
       font-family: "Merienda", cursive;
@@ -40,9 +40,9 @@
 }
 
 .card-img-top {
-  height: 70px;
+  height: 150px;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
