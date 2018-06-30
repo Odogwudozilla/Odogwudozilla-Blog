@@ -1,55 +1,55 @@
 <%= will_paginate @posts, inner_window: 2, outer_window: 1, class: "flickr_pagination" %>
-  <div class="col-sm-6">
-    <table class="table table-hover px-4 table-responsive-sm">
-      <thead>
+
+  <table class="table table-hover px-4 table-responsive-sm">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col" class="text-center">Preview</th>
+        <th scope="col" class="text-center">Actions</th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @posts.each do |post| %>
         <tr>
-          <th scope="col">Title</th>
-          <th scope="col" class="text-center">Preview</th>
-          <th scope="col" class="text-center">Actions</th>
+          <td>
+            <h5>
+              <%= post.title %>
+            </h5>
+          </td>
+          <td>
+            <h6 class="text-justify">
+              <%= truncate(strip_tags(post.body), length: 300) %>
+                <%= link_to 'Show', post, class: "" %>
+                  <div>
 
-        </tr>
-      </thead>
+                    <small class="font-weight-bold">Tags:
+                      <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
+                    </small>
+                  </div>
 
-      <tbody>
-        <% @posts.each do |post| %>
-          <tr>
+            </h6>
+          </td>
+
+          <td>
+            <%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %>
+          </td>
+          <% if post.published? %>
             <td>
-              <h5>
-                <%= post.title %>
-              </h5>
+              <%= link_to 'Unplublish', unpublish_post_path(post), method: :put, class: "btn btn-warning" %>
             </td>
-            <td>
-              <h6 class="text-justify">
-                <%= truncate(strip_tags(post.body), length: 300) %>
-                  <%= link_to 'Show', post, class: "" %>
-                    <div>
-
-                      <small class="font-weight-bold">Tags:
-                        <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
-                      </small>
-                    </div>
-
-              </h6>
-            </td>
-
-            <td>
-              <%= link_to 'Edit', edit_post_path(post), class: "btn btn-info" %>
-            </td>
-            <% if post.published? %>
+            <% else %>
               <td>
-                <%= link_to 'Unplublish', unpublish_post_path(post), method: :put, class: "btn btn-warning" %>
+                <%= link_to 'Publish', publish_post_path(post), method: :put, class: "btn btn-success" %>
               </td>
-              <% else %>
+              <% end %>
                 <td>
-                  <%= link_to 'Publish', publish_post_path(post), method: :put, class: "btn btn-success" %>
+                  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
                 </td>
-                <% end %>
-                  <td>
-                    <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-                  </td>
-          </tr>
-          <% end %>
-      </tbody>
-    </table>
-  </div>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+
   <%= link_to 'New Post', new_post_path, class: "btn btn-success" %>

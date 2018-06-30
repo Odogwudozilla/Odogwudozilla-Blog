@@ -158,12 +158,12 @@ hr.style18:before {
 }
 
 // Posts show page
-.col-sm-10 a {
+#post-show-body a {
   text-align: center;
   img {
-    width: 600px;
-    height: 400px;
-    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
   }
 }
 
