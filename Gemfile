@@ -33,6 +33,8 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'trix', '~> 0.11.1'
 # a toolkit for file attachments in Ruby applications
 gem 'shrine', '~> 2.11'
+# Production file upload using Amazon s3 
+gem 'aws-sdk-s3', '~> 1.16'
 # Tag a single model on several contexts, such as skills, interests, and awards
 gem 'acts-as-taggable-on', '~> 6.0'
 # frameworks for multiple-provider authentication.
@@ -75,6 +77,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Shrine for testing
+  gem 'shrine-memory'
 end
 
 group :development do
@@ -93,6 +97,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.1'
+  # Autoload the env
+  gem 'dotenv-rails', '~> 2.5'
 
 end
 

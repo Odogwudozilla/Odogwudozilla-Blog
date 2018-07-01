@@ -159,11 +159,14 @@ hr.style18:before {
 
 // Posts show page
 #post-show-body a {
-  text-align: center;
+  text-align: center !important;
+  align-content: center !important;
   img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     max-height: 100%;
+    display: block;
+    margin: 0 auto;
   }
 }
 
