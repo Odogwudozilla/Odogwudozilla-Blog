@@ -108,6 +108,7 @@ group :test do
   gem 'minitest',                 '~> 5.11.3'
   gem 'minitest-reporters',       '~> 1.1.14'
   gem 'guard-minitest',           '~> 2.4.4'
+  gem 'shrine-memory'
 end
 
 group :production do
