@@ -25,6 +25,8 @@
 # Ignore application configuration
 /config/application.yml
 
+
+
 # Good gitignore rules from Octocat
 
 # Compiled source #
