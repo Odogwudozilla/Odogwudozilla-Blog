@@ -33,6 +33,12 @@ gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'trix', '~> 0.11.1'
 # a toolkit for file attachments in Ruby applications
 gem 'shrine', '~> 2.11'
+# Set of higher-level helper methods for image processing.
+gem 'image_processing', '~> 1.4'
+# Manipulate images with minimal use of memory via ImageMagick
+gem 'mini_magick', '~> 4.8'
+# store_dimensions plugin 
+gem 'fastimage'
 # Production file upload using Amazon s3 
 gem 'aws-sdk-s3', '~> 1.16'
 # Tag a single model on several contexts, such as skills, interests, and awards
@@ -108,7 +114,6 @@ group :test do
   gem 'minitest',                 '~> 5.11.3'
   gem 'minitest-reporters',       '~> 1.1.14'
   gem 'guard-minitest',           '~> 2.4.4'
-  gem 'shrine-memory'
 end
 
 group :production do

@@ -1,8 +1,9 @@
-<%= simple_form_for(@photo_upload) do |f| %>
+<%= simple_form_for @photo_upload, html: {multipart: true} do |f| %>
   <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :image %>
+      <%= f.hidden_field :image, value: @photo_upload.cached_image_data %>
+        <%= f.file_field :image %>
     </div>
 
     <div class="form-actions">

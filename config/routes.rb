@@ -16,8 +16,5 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   get 'static_pages/projects'
 
-  # Shrine Amazon S3
-  mount Shrine.presign_endpoint(:cache) => "/presign"
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

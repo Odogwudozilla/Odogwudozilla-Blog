@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+  <%= notice %>
+</p>
 
 <h1>Photo Uploads</h1>
 
@@ -13,12 +15,24 @@
   <tbody>
     <% @photo_uploads.each do |photo_upload| %>
       <tr>
-        <td><%= photo_upload.image_data %></td>
-        <td><%= link_to 'Show', photo_upload %></td>
-        <td><%= link_to 'Edit', edit_photo_upload_path(photo_upload) %></td>
-        <td><%= link_to 'Destroy', photo_upload, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= photo_upload.image_data %>
+
+        </td>
+        <td>
+          <%= image_tag photo_upload.image_url(:thumb) %>
+        </td>
+        <td>
+          <%= link_to 'Show', photo_upload %>
+        </td>
+        <td>
+          <%= link_to 'Edit', edit_photo_upload_path(photo_upload) %>
+        </td>
+        <td>
+          <%= link_to 'Destroy', photo_upload, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
-    <% end %>
+      <% end %>
   </tbody>
 </table>
 
