@@ -47,5 +47,10 @@ class Post < ApplicationRecord
         "Not published yet."
       end 
     end
-  end 
+  end
+  
+  # Set the taglist commas to persist on edit 
+  # def tag_list
+  #   tags.join(', ')
+  # end
 end

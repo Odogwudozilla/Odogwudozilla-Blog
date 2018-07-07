@@ -1,0 +1,34 @@
+<hr class="style15 mx-0">
+<div class="post-author row pl-3 pb-5 h-100 justify-content-center ">
+  <div class="d-flex justify-content-center col-sm-12 col-md-1 col-lg-1">
+    <%=image_tag("Passport.jpg")%>
+  </div>
+  <div class="author-details col-sm-12 col-md-8 col-lg-6">
+    <span class="author-name py-1">
+      <%= @post.odogwu.try(:firstname) %>
+        <%= @post.odogwu.try(:lastname) %>
+    </span>
+
+    <h6 class="author-bio ">
+      <%= @post.odogwu.try(:bio) %>
+    </h6>
+    <div class="icons-social">
+      <a target="_blank" href="https://github.com/Odogwudozilla">
+        <i class="fab fa-github"></i>
+      </a>
+      <a target="_blank" href="www.linkedin.com/in/chidoziennachor">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/odogwudozilla">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a target="_blank" href="https://medium.com/@odogwudozilla">
+        <i class="fab fa-medium"></i>
+      </a>
+      <a target="_blank" href="https://sourcerer.io/odogwudozilla">
+        <i class="fab fa-discourse"></i>
+      </a>
+
+    </div>
+  </div>
+</div>

@@ -6,50 +6,61 @@
       <%= resource_name.to_s.humanize %>
     </h2>
   </div>
+  <div class="card px-2 ">
+    <div class="align-items-center form-div row d-flex align-items-stretch my-4 mx-2">
 
-  <div class="align-items-center offset-sm-4 form-div">
+      <div class="col-md-4 mt-4">
+        <div class="card card-body">
 
-    <div class="col-md-6 card card-body">
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <%= f.error_notification %>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= f.error_notification %>
 
-          <div class="form-inputs">
-            <% if current_odogwu.username == nil %>
-              <%= f.input :username, required: true %>
-                <% else %>
-                  <%= f.input :username, required: false %>
-                    <% end %>
-                      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-                        <p>Currently waiting confirmation for:
-                          <%= resource.unconfirmed_email %>
-                        </p>
+              <div class="form-inputs">
+                <% if current_odogwu.username == nil %>
+                  <%= f.input :username, required: true %>
+                    <% else %>
+                      <%= f.input :username, required: false %>
                         <% end %>
+                          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                            <p>Currently waiting confirmation for:
+                              <%= resource.unconfirmed_email %>
+                            </p>
+                            <% end %>
 
-                          <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it",  wrapper_html: { class: 'h6' },  required: false %>
-                            <%= f.input :password_confirmation, required: false %>
-                              <% if f.object.encrypted_password.present? %>
-                                <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
-                                  <% end %>
-                                    <div class="">
-                                      <h6>Other information
-                                        <h6>
-                                          <%= f.input :firstname, required: false %>
-                                            <%= f.input :lastname, required: false %>
+                              <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it",  wrapper_html: { class: 'h6' },  required: false %>
+                                <%= f.input :password_confirmation, required: false %>
+                                  <% if f.object.encrypted_password.present? %>
+                                    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+                                      <% end %>
+              </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4">
 
-                                    </div>
-          </div>
+        <div class=" card card-body">
+          <h5>Other information</h5>
+          <hr class="mt-0">
+          <h6>
+            <%= f.input :firstname, required: false %>
+              <%= f.input :lastname, required: false %>
+                <%= f.input :bio, label: "Author Bio" %>
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div class="ml-2 my-3">
+      <div class="form-actions">
+        <%= f.button :submit, "Update", wrapper_html: { class: 'h6' } %>
+      </div>
+      <% end %>
+        <h5>Cancel my account</h5>
 
-          <div class="form-actions">
-            <%= f.button :submit, "Update", wrapper_html: { class: 'h6' } %>
-          </div>
-          <% end %>
-            <h5>Cancel my account</h5>
-
-            <small>Unhappy?
-              <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-            </small>
-            <br>
-            <%= link_to "Back", :back %>
+        <small>Unhappy?
+          <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+        </small>
+        <br>
+        <%= link_to "Back", :back %>
     </div>
   </div>
+</div>
 </div>
