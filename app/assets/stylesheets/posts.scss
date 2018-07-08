@@ -48,7 +48,8 @@
 
 .body-text {
   line-height: 1.7em !important;
-  font-weight: 400;
+  font-weight: 300;
+  color: #000000;
 }
 
 // the edit form
@@ -173,7 +174,12 @@ hr.style18:before {
 }
 
 // Posts show page
+#post-show-body h6,
 #post-show-body a {
+  strong {
+    font-family: "Merienda", cursive;
+    color: #0e0d0d;
+  }
   img {
     max-width: 70%;
     height: auto;

@@ -14,15 +14,16 @@
           <h2 class="font-weight-bold">
             <%= @post.title %>
           </h2>
-          <h6>Authur:
-            <%= @post.odogwu.try (:firstname) %>
-              <%= @post.odogwu.try(:lastname) %>
-
-                <div class="">
-                  <small>
-                    <%= @post.display_day_published %>
-                  </small>
-                </div>
+          <h6>Author:
+            <strong>
+              <%= @post.odogwu.try (:firstname) %>
+                <%= @post.odogwu.try(:lastname) %>
+            </strong>
+            <div class="">
+              <small>
+                <%= @post.display_day_published %>
+              </small>
+            </div>
         </div>
         <div class="col-sm-10">
           <small>Category:
