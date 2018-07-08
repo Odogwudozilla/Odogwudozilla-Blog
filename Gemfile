@@ -48,6 +48,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-github'
 # Simple Rails app key configuration
 gem "figaro"
+# Helper for add social share feature in your Rails app
+gem 'social-share-button', '~> 1.1'
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

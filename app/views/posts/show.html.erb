@@ -19,18 +19,22 @@
               <%= @post.odogwu.try (:firstname) %>
                 <%= @post.odogwu.try(:lastname) %>
             </strong>
-            <div class="">
+            <div class="published-date">
               <small>
                 <%= @post.display_day_published %>
               </small>
+              <div class="social-share-button mt-2">Share this post:
+                <%= social_share_button_tag(@post.title) %>
+              </div>
             </div>
         </div>
         <div class="col-sm-10">
           <small>Category:
             <%= link_to @post.category.clan %>
-
           </small>
+
         </div>
+
 
         <hr class="style17 mb-5 mt-0">
 
@@ -38,6 +42,9 @@
           <h6 class="body-text ">
             <%= sanitize @post.body %>
           </h6>
+        </div>
+        <div class="social-share-button mt-2 text-center">Share this post:
+          <%= social_share_button_tag(@post.title) %>
         </div>
         <hr class="style18 mb-2">
 

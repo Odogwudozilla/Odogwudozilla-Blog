@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require trix
 //= require jquery3
 //= require popper
@@ -18,10 +19,8 @@
 //= require turbolinks
 //= require_tree .
 
-
-$(function () {
-  setTimeout(function () {
-    $('#noticewrapper').slideUp(500);
+$(function() {
+  setTimeout(function() {
+    $("#noticewrapper").slideUp(500);
   }, 2500);
 });
-
