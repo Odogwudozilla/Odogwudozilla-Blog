@@ -25,6 +25,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.friendly.find(params[:id]) # calls the friendly_id action on the posts
+    impressionist(@post) # 2nd argument is optional
   end
 
   # GET /posts/new

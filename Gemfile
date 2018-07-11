@@ -50,6 +50,8 @@ gem 'omniauth-github'
 gem "figaro"
 # Helper for add social share feature in your Rails app
 gem 'social-share-button', '~> 1.1'
+# Log impressions from controller actions or from a model (e.g. pageview count)
+gem 'impressionist', '~> 1.6', '>= 1.6.1'
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
