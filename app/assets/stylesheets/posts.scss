@@ -221,9 +221,33 @@ hr.style18:before {
     height: 1.5em;
     width: 1.5em;
     padding: 15px;
+    &:hover {
+      animation: bounce 1s;
+    }
   }
 }
 
 div.page-count {
   font-size: 0.7em;
+}
+
+// bounce effect
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }

@@ -27,18 +27,19 @@
               <small>Category:
                 <%= link_to @post.category.clan %>
               </small>
-
-              <div class="page-count">
-                <span class="pageviews">Total Page views:
-                  <%= @post.impressionist_count %>
-                </span> |
-                <span class="pageviews">Unique Page Views:
-                  <%= @post.impressionist_count(:filter=>:session_hash) %>
-                </span>
-              </div>
-              <div class="social-share-button mt-2">Share this post:
-                <%= social_share_button_tag(@post.title) %>
-              </div>
+              <% if @post.published? %>
+                <div class="page-count">
+                  <span class="pageviews">Total Page views:
+                    <%= @post.impressionist_count %>
+                  </span> |
+                  <span class="pageviews">Unique Page Views:
+                    <%= @post.impressionist_count(:filter=>:session_hash) %>
+                  </span>
+                </div>
+                <% end %>
+                  <div class="social-share-button mt-2">Share this post:
+                    <%= social_share_button_tag(@post.title) %>
+                  </div>
             </div>
         </div>
 
