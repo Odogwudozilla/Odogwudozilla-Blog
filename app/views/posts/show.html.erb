@@ -6,7 +6,7 @@
       <div class="card px-3 py-5">
         <div class="text-center pb-3 ">
           <small class="font-weight-bold">Today:
-            <%= Time.now.strftime('%B %-d, %Y') %>
+            <%= Time.now.strftime('%B %-d, %Y | Time: %X %Z') %>
           </small>
         </div>
 
@@ -57,7 +57,7 @@
         </div>
         <hr class="style18 mb-2">
 
-        <div class="form-actions">
+        <div class="form-actions ml-5">
           <% if odogwu_signed_in? %>
             <div class="pb-4">
               <%= link_to 'Edit', edit_post_path(@post) %> |

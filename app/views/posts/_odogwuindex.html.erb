@@ -24,7 +24,7 @@
                 <%= link_to 'Show', post, class: "" %>
                   <div>
 
-                    <small class="font-weight-bold">Tags:
+                    <small class="">Tags:
                       <%= sanitize post.tags.map { |t| link_to t.name, posts_path(tag: t.name) }.join(', ') %>
                     </small>
                   </div>
