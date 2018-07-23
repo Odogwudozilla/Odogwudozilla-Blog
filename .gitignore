@@ -71,4 +71,4 @@ ehthumbs.db
 Thumbs.db
 
 # ignore the public folder
-public/uploadsconfig/application.yml
+public/uploads
