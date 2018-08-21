@@ -52,6 +52,8 @@ gem "figaro"
 gem 'social-share-button', '~> 1.1'
 # Log impressions from controller actions or from a model (e.g. pageview count)
 gem 'impressionist', '~> 1.6', '>= 1.6.1'
+
+
 # *********** My added gems END here: **********************************
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -123,6 +125,8 @@ end
 group :production do
   # Use postgresql as the database for Active Record
   gem 'pg', '~> 0.18'
+  #Enable gzip compression on heroku, but don't compress images.
+  gem 'heroku-deflater', '~> 0.6.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
