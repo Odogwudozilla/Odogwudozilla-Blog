@@ -16,11 +16,12 @@
           <%= link_to 'Blog', posts_path, class: "nav-link #{yield(:post_active)}" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Projects', static_pages_projects_path, class: "nav-link #{yield(:projects_active)}" %>
+          <%= link_to 'Projects', projects_path, class: "nav-link #{yield(:projects_active)}" %>
         </li>
         <% if current_odogwu %>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-capitalize" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-capitalize" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+              aria-label="Signed in navigation">
               <i class="far fa-user-circle"></i>
             </a>
             <div class="dropdown-menu text-centre">
