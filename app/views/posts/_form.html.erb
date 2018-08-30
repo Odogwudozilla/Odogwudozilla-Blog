@@ -13,11 +13,14 @@
                     <%= f.input :title, required: false, autofocus: true, placeholder:"Enter title of post" %>
                       <%= f.input :banner_image_url, placeholder:"Enter an Image link" %>
                         <%= f.input :tag_list, label: "Tags", placeholder:"Enter a tag" %>
+                          <div class="py-4">
+                            <%= render 'bodypreview', post: @post %>
+                          </div>
         </div>
 
-        <div class="form-actions">
+        <div class="form-actions py-4">
           <% if current_page?(new_post_path(post)) %>
-            <div class="px-3 pb-4 ">
+            <div class="px-3 py-4 ">
               <%= f.button :submit, "Create Post" %>
             </div>
             <div class="pb-4">

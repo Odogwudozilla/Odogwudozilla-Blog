@@ -24,8 +24,9 @@ class Odogwu < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, 
+         :recoverable, :rememberable, :trackable, :validatable, :timeoutable, 
          :omniauthable, :omniauth_providers => [:facebook, :github] # devise functionality for the Omniauth providers
+         
 
   has_many :posts
 

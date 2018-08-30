@@ -28,6 +28,8 @@
 #Ignore public/uploads
 public/uploads
 
+#Ignore vendor cache
+vendor/cache
 
 
 # Good gitignore rules from Octocat

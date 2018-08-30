@@ -48,7 +48,7 @@
 
 .body-text {
   line-height: 1.7em !important;
-  font-weight: 300;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -64,6 +64,13 @@
   max-height: 800px !important;
   overflow-y: auto;
   background: #ffffff;
+}
+
+blockquote {
+  padding-right: 100px;
+  padding-left: 100px;
+  font-style: italic;
+  border-left-style: solid;
 }
 
 hr.style15 {
