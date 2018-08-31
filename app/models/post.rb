@@ -53,4 +53,12 @@ class Post < ApplicationRecord
   # def tag_list
   #   tags.join(', ')
   # end
+
+  def word_count
+    self.body.split.size
+  end
+
+  def reading_time
+    (word_count / 180.0).ceil
+  end
 end

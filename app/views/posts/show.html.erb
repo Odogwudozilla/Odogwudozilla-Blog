@@ -41,6 +41,10 @@
                     <%= social_share_button_tag(@post.title) %>
                   </div>
             </div>
+            <div class=" py-2">
+              <%= @post.body.split.size %> words | <i class="far fa-clock"></i>
+                <%= pluralize(@post.reading_time, 'minute') %> read
+            </div>
         </div>
 
 
