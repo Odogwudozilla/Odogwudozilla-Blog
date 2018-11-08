@@ -72,5 +72,4 @@ vendor/cache
 ehthumbs.db
 Thumbs.db
 
-# ignore the public folder
-public/uploads
+
