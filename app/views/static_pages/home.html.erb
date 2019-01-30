@@ -1,187 +1,189 @@
 <% provide(:page_title, "Home") %>
-  <% provide(:home_active, "active") %>
-    <div class="homepage text-center p-2 ">
-      <span class="center">
-        <%=image_tag("Passport2.jpg")%>
-      </span>
-      <h1 class="mt-1">Chidozie Nnachor</h1>
-      <div class="strongpoints">
-        <i class="fas fa-thermometer-half"></i>
-        <span>Developer --</span>
-        <i class="fas fa-thermometer-three-quarters"></i>
-        <span>Web Designer --</span>
-        <i class="fas fa-thermometer-full"></i>
-        <span>Writer</span>
-      </div>
-      <div class="icons-social">
-        <a target="_blank" rel="noopener" href="https://github.com/Odogwudozilla">
-          <i class="hvr-bounce-in fab fa-github"></i>
-        </a>
-        <a target="_blank" rel="noopener" href="www.linkedin.com/in/chidoziennachor">
-          <i class="hvr-bounce-in fab fa-linkedin"></i>
-        </a>
-        <a target="_blank" rel="noopener" href="https://twitter.com/odogwudozilla">
-          <i class="hvr-bounce-in fab fa-twitter"></i>
-        </a>
-        <a target="_blank" rel="noopener" href="https://stackoverflow.com/users/6795180/chidozie-nnachor">
-          <i class="hvr-bounce-in fab fa-stack-overflow"></i>
-        </a>
-        <a target="_blank" rel="noopener" href="https://medium.com/@odogwudozilla">
-          <i class="hvr-bounce-in fab fa-medium"></i>
-        </a>
-        <a target="_blank" rel="noopener" href="https://sourcerer.io/odogwudozilla">
-          <i class="hvr-bounce-in fab fa-discourse"></i>
-        </a>
-        <a target="_blank" rel="noopener" href="https://bitbucket.org/Odogwudozilla/">
-          <i class="hvr-bounce-in fab fa-bitbucket"></i>
-        </a>
+<% provide(:home_active, "active") %>
+<div class="homepage text-center p-2 ">
+  <span class="center">
+    <%=image_tag("Passport2.jpg")%>
+  </span>
+  <h1 class="mt-1">Chidozie Nnachor</h1>
+  <div class="strongpoints">
+    <i class="fas fa-thermometer-half"></i>
+    <span>Developer --</span>
+    <i class="fas fa-thermometer-three-quarters"></i>
+    <span>Web Designer --</span>
+    <i class="fas fa-thermometer-full"></i>
+    <span>Writer</span>
+  </div>
+  <div class="icons-social">
+    <a target="_blank" rel="noopener" href="https://github.com/Odogwudozilla">
+      <i class="hvr-bounce-in fab fa-github"></i>
+    </a>
+    <a target="_blank" rel="noopener" href="www.linkedin.com/in/chidoziennachor">
+      <i class="hvr-bounce-in fab fa-linkedin"></i>
+    </a>
+    <a target="_blank" rel="noopener" href="https://twitter.com/odogwudozilla">
+      <i class="hvr-bounce-in fab fa-twitter"></i>
+    </a>
+    <a target="_blank" rel="noopener" href="https://stackoverflow.com/users/6795180/chidozie-nnachor">
+      <i class="hvr-bounce-in fab fa-stack-overflow"></i>
+    </a>
+    <a target="_blank" rel="noopener" href="https://medium.com/@odogwudozilla">
+      <i class="hvr-bounce-in fab fa-medium"></i>
+    </a>
+    <a target="_blank" rel="noopener" href="https://sourcerer.io/odogwudozilla">
+      <i class="hvr-bounce-in fab fa-discourse"></i>
+    </a>
+    <a target="_blank" rel="noopener" href="https://bitbucket.org/Odogwudozilla/">
+      <i class="hvr-bounce-in fab fa-bitbucket"></i>
+    </a>
+  </div>
+</div>
+<hr class="style17">
+<div class="summary card">
+  <div class="summary-text p-3 text-justify ">
+    <h6>
+      Hey there!
+      <br>
+      <br> Welcome to my portfolio and blog page.
+      <br> I am a fledgling web developer with a keen interest in breaking new grounds in Information Technology and
+      Business Analytics. I am especially interested in using technology to both predict and change behaviour
+      positively
+      and building efficient data systems.
+      <br> You can checkout my
+      <a href="#portfolio">career timeline</a>.
+      <br>
+      <br> I enlisted into the Software/Technology sector (a journey which began precisely November 2017) in a career
+      shift that is better attuned to my interests, and so far, the road, though rough, has been worth every yard of
+      it. My primary programming language is Ruby. I'm probably not a
+      <a target="_blank" rel="noopener" href="https://www.amazon.co.uk/Well-Grounded-Rubyist-David-Black/dp/1933988657/ref=sr_1_2?ie=UTF8&qid=1530229644&sr=8-2&keywords=the+well+grounded+rubyist">well-grounded
+        rubyist
+      </a> yet, but I know enough to develop a fully functional web application, like this site.
+      <br>
+      <br> Feel free to have a look at my
+      <%= link_to 'Blog', posts_path %>.
+    </h6>
+
+
+  </div>
+
+</div>
+<div class="timeline-header">
+  <hr class="style17">
+  <h2 class="mb-0 text-center">
+    Career Timeline
+  </h2>
+  <hr class="style17">
+</div>
+<div class="splash card-group p-3 mt-0">
+
+  <div class="front-img col-sm-10 col-md-6 col-lg-5 mt-3">
+    <div class="image-left">
+      <%=image_tag("Dozzy12.jpg")%>
+    </div>
+
+
+    <div class="timeline-container-left">
+      <div class="timeline card p-4">
+        <h4>Volunteer efforts </h4>
+        <hr class="my-2">
+        <h6 class="">
+          <strong>Cantcha</strong>(CodeTheCity, Aberdeen):
+          <ul>
+            <li>A Code-The-City Aberdeen project themed
+              <a target="_blank" rel="noopener" href="https://codethecity.org/hack-weekends/code-the-city-13-hack-societys-relationship-with-alcohol/">“Hacking
+                Our Relationship With Alcohol”</a>, to demonstrate how difficult it is to tell an alcoholic drink label
+              from a non-alcoholic one by the ordinary user, and using machine learning to develop a captcha that can
+              catch these grey areas. Started May 2018
+              <a target="_blank" rel="noopener" href="https://github.com/CodeTheCity/cantcha"> (in progress).</a>
+            </li>
+          </ul>
+          <hr class="my-2">
+
+          <span>
+            <%= link_to 'Full Resume', 'Nnachor_CV.pdf', class: "nav-link" %>.</span>
+
+
       </div>
     </div>
-    <hr class="style17">
-    <div class="summary card">
-      <div class="summary-text p-3 text-justify ">
-        <h6>
-          Hey there!
-          <br>
-          <br> Welcome to my portfolio and blog page.
-          <br> I am a fledgling web developer with a keen interest in breaking new grounds in Information Technology and
-          Business Analytics. I am especially interested in using technology to both predict and change behaviour positively
-          and building efficient data systems.
-          <br> You can checkout my
-          <a href="#portfolio">career timeline</a>.
-          <br>
-          <br> I enlisted into the Software/Technology sector (a journey which began precisely November 2017) in a career
-          shift that is better attuned to my interests, and so far, the road, though rough, has been worth every yard of
-          it. My primary programming language is Ruby. I'm probably not a
-          <a target="_blank" rel="noopener" href="https://www.amazon.co.uk/Well-Grounded-Rubyist-David-Black/dp/1933988657/ref=sr_1_2?ie=UTF8&qid=1530229644&sr=8-2&keywords=the+well+grounded+rubyist">well-grounded
-            rubyist
-          </a> yet, but I know enough to develop a fully functional web application, like this site.
-          <br>
-          <br> Feel free to have a look at my
-          <%= link_to 'Blog', posts_path %>.
+
+  </div>
+
+  <div class="col-sm-12 col-md-6 col-lg-7 ">
+    <div class="portfolio"></div>
+    <a class="anchor" id="portfolio"></a>
+    <div class="timeline-container">
+      <div class="timeline card p-4">
+        <h4>Currently...</h4>
+        <h6>Built a database management system for the Scotland's Rural College
+          <a target="_blank" rel="noopener" href="https://www.sruc.ac.uk/">(SRUC)</a> crop yield field trials which
+          includes
+          visualisation of the data for public consumption. You can view the project
+          <a target="_blank" rel="noopener" href="https://sruc.herokuapp.com">here.</a>
         </h6>
-
-
       </div>
-
     </div>
-    <div class="timeline-header">
-      <hr class="style17">
-      <h2 class="mb-0 text-center">
-        Career Timeline
-      </h2>
-      <hr class="style17">
-    </div>
-    <div class="splash card-group p-3 mt-0">
 
-      <div class="front-img col-sm-10 col-md-6 col-lg-5 mt-3">
-        <div class="image-left">
-          <%=image_tag("Dozzy12.jpg")%>
-        </div>
-
-
-        <div class="timeline-container-left">
-          <div class="timeline card p-4">
-            <h4>Volunteer efforts </h4>
-            <hr class="my-2">
-            <h6 class="">
-              <strong>Cantcha</strong>(CodeTheCity, Aberdeen):
-              <ul>
-                <li>A Code-The-City Aberdeen project themed
-                  <a target="_blank" rel="noopener" href="https://codethecity.org/hack-weekends/code-the-city-13-hack-societys-relationship-with-alcohol/">“Hacking
-                    Our Relationship With Alcohol”</a>, to demonstrate how difficult it is to tell an alcoholic drink label
-                  from a non-alcoholic one by the ordinary user, and using machine learning to develop a captcha that can
-                  catch these grey areas. Started May 2018
-                  <a target="_blank" rel="noopener" href="https://github.com/CodeTheCity/cantcha"> (in progress).</a>
-                </li>
-              </ul>
-              <hr class="my-2">
-
-              <span>
-                <%= link_to 'Full Resume', 'Nnachor_CV.pdf', class: "nav-link" %>.</span>
-
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-7 ">
-        <div class="portfolio"></div>
-        <a class="anchor" id="portfolio"></a>
-        <div class="timeline-container">
-          <div class="timeline card p-4">
-            <h4>Currently...</h4>
-            <h6>Built a database management system for the Scotland's Rural College
-              <a target="_blank" rel="noopener" href="https://www.sruc.ac.uk/">(SRUC)</a> crop yield field trials which includes
-              visualisation of the data for public consumption. You can view the project
-              <a target="_blank" rel="noopener" href="https://sruc.herokuapp.com">here.</a>
-            </h6>
-          </div>
-        </div>
-
-        <div class="timeline-container">
-          <div class="timeline card p-4">
-            <h4>2017 - 2018</h4>
-            <h6 class="mb-0">
-              <strong>2018:</strong> MSc,
-              <a target="_blank" rel="noopener" href="https://www.abdn.ac.uk/study/postgraduate-taught/degree-programmes/133/information-technology/">Information
-                Technology,
-              </a> University of Aberdeen
-              <ul>
-                <li>Agile Software Development</li>
-                <li>Programming with Ruby</li>
-                <li>Test-Driven Development</li>
-              </ul>
-            </h6>
-            <h6>
+    <div class="timeline-container">
+      <div class="timeline card p-4">
+        <h4>2017 - 2018</h4>
+        <h6 class="mb-0">
+          <strong>2018:</strong> MSc,
+          <a target="_blank" rel="noopener" href="https://www.abdn.ac.uk/study/postgraduate-taught/degree-programmes/133/information-technology/">Information
+            Technology,
+          </a> University of Aberdeen
+          <ul>
+            <li>Agile Software Development</li>
+            <li>Programming with Ruby</li>
+            <li>Test-Driven Development</li>
+          </ul>
+        </h6>
+        <!-- <h6>
               <strong>2017:</strong> Recipient, Nigeria Liquefied Natural Gas (NLNG)
               <a target="_blank" rel="noopener" href="http://www.nlng.com/Our-CSR/Pages/Scholarships.aspx">Postgraduate Scholarship</a>
-            </h6>
-            <h6>
-              <strong>2017:</strong> Logistics, Glaxonet Technologies, Onitsha, Nigeria
-              <ul>
-                <li>Develop and delineate the marketing strategy of the firm</li>
-                <li>Feasibility studies</li>
-              </ul>
-            </h6>
-          </div>
-        </div>
-
-        <div class="timeline-container">
-          <div class="timeline card p-4">
-            <h4>2014 - 2016</h4>
-            <h6>
-              <strong>Banking Assistant</strong> –
-              <a target="_blank" rel="noopener" href="https://www.firstbanknigeria.com/">First Bank Nigeria</a>
-              <ul>
-                <li>Customer Relationship Management</li>
-                <li>Vault Management</li>
-                <li>Business Analysis</li>
-              </ul>
-            </h6>
-          </div>
-        </div>
-
-
-        <div class="timeline-container">
-          <div class="timeline card p-4">
-            <h4>2010 - 2013</h4>
-            <h6>
-              <ul>
-                <li>2013: Glaxonet Technologies</li>
-                <li>2012: National Youth Service Corps
-                  <a target="_blank" rel="noopener" href="http://www.nysc.gov.ng/aboutscheme.html">(NYSC)</a>
-                </li>
-                <li>2010:
-                  <a target="_blank" rel="noopener" href="http://economics.unn.edu.ng/course-modules/">Degree in Economics</a>,
-                  University of Nigeria, Nsukka (UNN)
-                </li>
-              </ul>
-            </h6>
-          </div>
-        </div>
-
-
+            </h6> -->
+        <h6>
+          <strong>2017:</strong> Logistics, Glaxonet Technologies, Onitsha, Nigeria
+          <ul>
+            <li>Develop and delineate the marketing strategy of the firm</li>
+            <li>Feasibility studies</li>
+          </ul>
+        </h6>
       </div>
     </div>
+
+    <div class="timeline-container">
+      <div class="timeline card p-4">
+        <h4>2014 - 2016</h4>
+        <h6>
+          <strong>Banking Assistant</strong> –
+          <a target="_blank" rel="noopener" href="https://www.firstbanknigeria.com/">First Bank Nigeria</a>
+          <ul>
+            <li>Customer Relationship Management</li>
+            <li>Vault Management</li>
+            <li>Business Analysis</li>
+          </ul>
+        </h6>
+      </div>
+    </div>
+
+
+    <div class="timeline-container">
+      <div class="timeline card p-4">
+        <h4>2010 - 2013</h4>
+        <h6>
+          <ul>
+            <li>2013: Glaxonet Technologies</li>
+            <li>2012: National Youth Service Corps
+              <a target="_blank" rel="noopener" href="http://www.nysc.gov.ng/aboutscheme.html">(NYSC)</a>
+            </li>
+            <li>2010:
+              <a target="_blank" rel="noopener" href="http://economics.unn.edu.ng/course-modules/">Degree in Economics</a>,
+              University of Nigeria, Nsukka (UNN)
+            </li>
+          </ul>
+        </h6>
+      </div>
+    </div>
+
+
+  </div>
+</div>
