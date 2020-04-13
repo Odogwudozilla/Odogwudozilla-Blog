@@ -36,7 +36,7 @@ gem 'shrine', '~> 2.11'
 # Set of higher-level helper methods for image processing.
 gem 'image_processing', '~> 1.4'
 # Manipulate images with minimal use of memory via ImageMagick
-gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.9'
 # store_dimensions plugin 
 gem 'fastimage'
 # Production file upload using Amazon s3 
