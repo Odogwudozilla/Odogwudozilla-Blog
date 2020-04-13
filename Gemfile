@@ -12,7 +12,7 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11', '>= 1.11.1'
 # Forms made easy for Rails!
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 5.0'
 # Devise for Authentication
 gem 'devise', '~> 4.4', '>= 4.4.3'
 # Allows you to create pretty URL’s and work with human-friendly strings as if they were numeric ids for ActiveRecord models.
