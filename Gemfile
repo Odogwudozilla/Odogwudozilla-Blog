@@ -20,7 +20,7 @@ gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 # enabling remote multipart forms (AJAX style file uploads) with jquery-rails
 gem 'remotipart', '~> 1.4', '>= 1.4.2'
 # Rails engine that provides an easy-to-use interface for managing your data.
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 # Simple authorization solution for Rails. All permissions are stored in a single location.
 gem 'cancancan', '~> 2.2'
 # used to easily generate fake data: names, addresses, phone numbers, etc.
