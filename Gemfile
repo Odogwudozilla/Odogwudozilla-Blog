@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.4.1'
+ruby '2.7.5'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -47,7 +47,7 @@ gem 'acts-as-taggable-on', '~> 6.0'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
 # Simple Rails app key configuration
-gem "figaro"
+gem 'figaro'
 # Helper for add social share feature in your Rails app
 gem 'social-share-button', '~> 1.1'
 # Log impressions from controller actions or from a model (e.g. pageview count)
@@ -95,8 +95,8 @@ end
 
 group :development do
 # get better error calls and notifications than the native Ruby error
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'better_errors'
+  gem 'binding_of_caller'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   # To live reload the local server

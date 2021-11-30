@@ -14,9 +14,10 @@ class ApplicationController < ActionController::Base
 
   protected
 
-    def configure_permitted_parameters # permit these objects to be written to database
-        devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:username, :firstname, :lastname, :email, :password) }
-        devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username, :firstname, :lastname, :bio, :email, :password, :current_password, :password_confirmation) }
-    end
+# permit these objects to be written to database
+  def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:username, :firstname, :lastname, :email, :password) }
+      devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username, :firstname, :lastname, :bio, :email, :password, :current_password, :password_confirmation) }
+  end
 
 end
