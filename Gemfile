@@ -8,7 +8,7 @@ git_source(:github) do |repo_name|
 end
 
 # *********** My added gems START here: **********************************
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11', '>= 1.11.1'
 # Forms made easy for Rails!
